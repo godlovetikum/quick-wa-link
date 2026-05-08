@@ -373,16 +373,16 @@ a:hover {
 }
 
 #developer img {
-  width: 75px;
-  height: 75px;
-  border-radius: 50%;
+  width: 275px;
+  height: auto;
+  border-radius: 8px;
   box-shadow: 1px 1px 5px #345;
 }
 
 #developer .wrap {
-  max-width: 320px;
-  margin: auto;
-  font-size: 0.5rem;
+  max-width: 620px;
+  margin-inline: auto;
+  font-size: 1rem;
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
@@ -394,7 +394,7 @@ a:hover {
 }
 
 #developer .card h3 {
-  font-size: 0.5rem;
+  font-size: 1.5rem;
 }
 
 #developer .wrap .card {
@@ -420,11 +420,7 @@ a:hover {
 }
 
 #developer #devFbLink {
-  background: #00f;
-}
-
-#developer strong {
-  color: #500;
+  background: #3e3;
 }
 
 .close {
@@ -514,6 +510,7 @@ a:hover {
    #developer .card {
      width: 100%;
      margin: auto;
+      flex-direction: column;
    }
  }
  
