@@ -1,239 +1,786 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Quick Wa Link</title>
-  <meta name="description" content="Quick Wa Link lets you generate free WhatsApp links with pre-filled messages for marketing, sales, and customer service.">
-  <meta name="google-site-verification" content="a2Xe9n2LEOxR5Y1d8Mcm4lB1Clta56-SOBj-C-99ik8" />
-  <link rel="icon" href="images/quick-wa-link-logo.png" type="image/png">
-  <link rel="stylesheet" href="index-style.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="google-site-verification" content="a2Xe9n2LEOxR5Y1d8Mcm4lB1Clta56-SOBj-C-99ik8" />
+  <!-- Primary Meta -->
+  <title>Quick Wa Link — Free WhatsApp Link Generator</title>
+  <meta name="title"       content="Quick Wa Link — Free WhatsApp Link Generator" />
+  <meta name="description" content="Generate free WhatsApp links with pre-filled messages in seconds. No app needed. Perfect for marketers, businesses, and creators. Built by Godlove Tikum." />
+  <meta name="keywords"    content="WhatsApp link generator, wa.me link, WhatsApp marketing, free WhatsApp link, click to chat WhatsApp, pre-filled message WhatsApp" />
+  <meta name="author"      content="Godlove Tikum" />
+  <meta name="robots"      content="index, follow" />
+  <meta name="theme-color" content="#075e54" />
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://quickwalink.netlify.app/" />
+  
+  <link rel="alternate" type="text/plain" title="LLMs.txt" href="https://quickwalink.netlify.app/llms.txt">
+  <!-- Open Graph -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:url"         content="https://quickwalink.netlify.app/" />
+  <meta property="og:title"       content="Quick Wa Link — Free WhatsApp Link Generator" />
+  <meta property="og:description" content="Generate free WhatsApp links with pre-filled messages in seconds. Perfect for marketers, small businesses, and creators." />
+  <meta property="og:image"       content="https://quickwalink.netlify.app/assets/images/og-image.png" />
+  <meta property="og:site_name"   content="Quick Wa Link" />
+  <meta property="og:locale"      content="en_US" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:url"         content="https://quickwalink.netlify.app/" />
+  <meta name="twitter:title"       content="Quick Wa Link — Free WhatsApp Link Generator" />
+  <meta name="twitter:description" content="Create clickable WhatsApp links with pre-filled messages. Share in bios, ads, posts. Free, instant, no account needed." />
+  <meta name="twitter:image"       content="https://quickwalink.netlify.app/assets/images/og-image.png" />
+  <meta name="twitter:creator"     content="@godlovtikum" />
+
+  <!-- PWA -->
+  <link rel="manifest" href="/manifest.json" />
+  <meta name="apple-mobile-web-app-capable"           content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style"  content="black-translucent" />
+  <meta name="apple-mobile-web-app-title"             content="Quick Wa Link" />
+  <meta name="application-name"                       content="Quick Wa Link" />
+  <link rel="apple-touch-icon"                    href="/assets/icons/icon-192.png" />
+  <link rel="apple-touch-icon" sizes="152x152"   href="/assets/icons/icon-152.png" />
+  <link rel="apple-touch-icon" sizes="144x144"   href="/assets/icons/icon-144.png" />
+  <link rel="apple-touch-icon" sizes="128x128"   href="/assets/icons/icon-128.png" />
+  <meta name="msapplication-TileColor"  content="#075e54" />
+  <meta name="msapplication-TileImage"  content="/assets/icons/icon-144.png" />
+  <meta name="msapplication-config"     content="none" />
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/svg+xml"           href="/assets/icons/icon.svg" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/icon-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/icon-16.png" />
+  <link rel="shortcut icon" type="image/png"      href="/assets/icons/icon-32.png" />
+
+  <!-- Theme: run before stylesheets to prevent light/dark flash -->
+  <script>
+    (function () {
+      var saved = localStorage.getItem('qwl-theme');
+      var sys   = window.matchMedia('(prefers-color-scheme:light)').matches ? 'light' : 'dark';
+      if ((saved || sys) === 'light') document.documentElement.setAttribute('data-theme', 'light');
+    })();
+  </script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="/assets/css/main.css" />
+  <link rel="stylesheet" href="/assets/css/index.css" />
+  <link rel="stylesheet" href="/assets/css/icons/fonts_awesome.css">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Quick Wa Link",
+    "url": "https://quickwalink.netlify.app",
+    "description": "Free WhatsApp link generator with pre-filled message support. Create wa.me links instantly.",
+    "applicationCategory": "UtilitiesApplication",
+    "operatingSystem": "Any",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "author": {
+      "@type": "Person",
+      "name": "Godlove Tikum",
+      "url": "https://godlovetikum.netlify.app",
+      "description": "Self-taught software engineer and accountant based in Cameroon who builds fast loading And high converting websites and mobile apps for SMEs.",
+      "sameAs": [
+        "https://facebook.com/godlovetikum101",
+        "https://x.com/Godlovetikum",
+        "https://github.com/godlovetikum"
+      ]
+    }
+  }
+  </script>
 </head>
 <body>
 
-  <!-- Header -->
-  <header class="site-header">
-    <img src="images/quick-wa-link-logo.png" class="site-logo" alt="Quick Wa Link logo">
-    
-    <div class="brand">
-      <h1 class="site-title">Quick Wa Link</h1>
-      <h2 class="tagline">Generate WhatsApp links fast, share anywhere</h2>
+  <!-- Skip Navigation -->
+  <a href="#mainContent" class="skip-link">Skip to main content</a>
+
+  <!-- ── Site Header ─────────────────────────────────────── -->
+  <header class="site-header" id="siteHeader" role="banner">
+    <div class="container">
+      <div class="header-inner">
+        <a href="/" class="header-brand" aria-label="Quick Wa Link — Home">
+          <img src="/assets/icons/icon.svg" alt="" class="brand-icon" width="36" height="36" aria-hidden="true" />
+          <div class="brand-text">
+            <span class="brand-name">Quick Wa Link</span>
+            <span class="brand-tagline">WhatsApp Link Generator</span>
+          </div>
+        </a>
+
+        <nav class="nav-links" aria-label="Main navigation">
+          <a href="#howItWorks"  class="nav-link">How It Works</a>
+          <a href="#useCases"    class="nav-link">Use Cases</a>
+          <a href="#about"       class="nav-link">About</a>
+          <a href="#contact"     class="nav-link">Contact</a>
+        </nav>
+
+        <div class="header-cta">
+          <button class="theme-toggle" id="themeToggle" aria-label="Switch to light mode" aria-pressed="false">
+            <svg class="icon-sun" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="4"/>
+              <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/>
+            </svg>
+            <svg class="icon-moon" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/>
+            </svg>
+          </button>
+          <a href="/dashboard/" class="btn btn-primary btn-sm">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true">
+              <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/>
+            </svg>
+            Generate Link
+          </a>
+        </div>
+
+        <button
+          class="menu-toggle"
+          id="menuToggle"
+          aria-label="Open navigation menu"
+          aria-expanded="false"
+          aria-controls="mobileNav"
+        >
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </div>
-    
-    <button id="menuBtn" class="menu-btn" aria-label="Toggle menu" aria-controls="navMenu" aria-expanded="false">
-      <span class="bar"></span>
-      <span class="bar"></span>
-      <span class="bar"></span>
-    </button>
   </header>
-  
-  <!-- Navigation -->
-  <nav id="navMenu" aria-hidden="true">
-    <ul class="nav-list">
-      <li><a class="navLinks" href="#intro">Home</a></li>
-      <li><a class="navLinks" href="#createLink">Create Link</a></li>
-      <li><a class="navLinks" href="#blog">Blog - What's New?</a></li>
-      <li><a class="navLinks" href="#help">Help Center</a></li>
-      <li><a class="navLinks" href="#developer">The Developer</a></li>
-      <li><a class="navLinks" href="#contactSection">Contact Us</a></li>
-    </ul>
+
+  <!-- Mobile Navigation -->
+  <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation" aria-hidden="true">
+    <div class="mobile-nav-links">
+      <a href="#howItWorks"  class="mobile-nav-link">How It Works</a>
+      <a href="#useCases"    class="mobile-nav-link">Use Cases</a>
+      <a href="#about"       class="mobile-nav-link">About</a>
+      <a href="#contact"     class="mobile-nav-link">Contact</a>
+    </div>
+    <a href="/dashboard/" class="btn btn-primary btn-full">
+      Generate My Link →
+    </a>
   </nav>
 
-  <main>
-    <!-- Intro / Hero -->
-    <section id="intro" class="intro-section">
-      <div class="wrap">
-        <h2>Create WhatsApp Links in Seconds <br><i>🚀</i></h2>
-        <p class="highlight">Quick Wa Link turns a phone number and a short message into a clickable WhatsApp URL you can drop into posts, profiles, ads, or bios, so people message you without saving your number first.</p>
-      </div>
-    </section>
+  <!-- ── Main Content ─────────────────────────────────────── -->
+  <main id="mainContent">
 
-    <!-- Why Section -->
-    <section id="why" class="why-section">
-      <div class="wrap">
-        <h2>Why Quick Wa Link matters for marketers</h2>
-        <p class="highlight">Turn a phone number and a short message into a clickable WhatsApp URL. With a single link you can:</p>
-        <ul class="benefits-list">
-          <li>Share a ready-to-chat link on Facebook, Instagram, TikTok, and Twitter</li>
-          <li>Use a default message to qualify leads instantly</li>
-          <li>Save time, look professional, and close conversations faster</li>
-        </ul>
-        <h3>What are you waiting for?</h3>
-      </div>
-    </section>
+    <!-- ── Hero ─────────────────────────────────────────────── -->
+    <section class="hero" id="hero" aria-labelledby="heroHeadline">
+      <div class="hero-bg" aria-hidden="true"></div>
 
-    <!-- Create / Form Section -->
-    <section id="createLink" class="form-section">
-      <div class="wrap">
-        <h2>Create your WhatsApp link</h2>
-        
-        <form id="waForm">
-          <div class="input-group">
-            <label for="countryCode">Country Code:</label>
-            <select id="countryCode" name="countryCode" required>
-              <option value="">Select country code</option>
-            </select>
+      <div class="container">
+        <div class="hero-inner">
+
+          <div class="hero-content">
+            <div class="hero-badge reveal">
+              <span class="badge badge-green">
+                <span class="badge-dot" aria-hidden="true"></span>
+                Free &amp; No Sign-up Required
+              </span>
+            </div>
+
+            <h1 class="hero-headline reveal reveal-delay-1" id="heroHeadline">
+              Generate WhatsApp Links
+              <span class="hero-headline-accent">Instantly</span>
+            </h1>
+
+            <p class="hero-subheadline reveal reveal-delay-2">
+              Turn any phone number into a clickable wa.me link — with a pre-filled message ready to send.
+              Perfect for marketers, sales teams, and businesses who want customers to reach them in one tap.
+            </p>
+
+            <div class="hero-actions reveal reveal-delay-3">
+              <a href="/dashboard/" class="btn btn-primary btn-lg">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/>
+                </svg>
+                Create My Link — It's Free
+              </a>
+              <a href="#howItWorks" class="btn btn-secondary btn-lg">
+                How It Works
+              </a>
+            </div>
+
+            <div class="hero-stats reveal reveal-delay-4" aria-label="Quick statistics">
+              <div class="stat-item">
+                <span class="stat-value">200+</span>
+                <span class="stat-label">Countries</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-value">100%</span>
+                <span class="stat-label">Free Forever</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-value">&lt;5s</span>
+                <span class="stat-label">Generation Time</span>
+              </div>
+            </div>
           </div>
-          
-          <div class="input-group">
-            <label for="phone">Phone Number:</label>
-            <input id="phone" name="phone" type="tel" inputmode="numeric" pattern="\d{6,15}" maxlength="15" placeholder="Example: 650123456" required />
-          </div>
-          
-          <div class="input-group">
-            <label for="message">Optional pre-filled message</label>
-            <textarea id="message" name="message" rows="5" placeholder="Hello, I saw your offer and I'm interested..."></textarea>
-          </div>
-          
-          <div class="form-actions">
-            <button type="submit" id="generateBtn">Generate Link</button>
-            <button type="button" id="previewBtn">Preview</button>
-          </div>
-          <div id="notification" class="notification" role="status" aria-live="polite"></div>
-        </form>
-      </div>
-    </section>
 
-    <!-- Output / Link Section -->
-    <section id="outputSection" class="output-section">
-      <div class="wrap">
-        <h2 class="output-title">Your Link is Ready 🎉</h2>
-        <p class="output-instruction">Copy and paste this where you want people to contact you.</p>
-        <div class="link-row">
-          <a id="waLink" href="#" target="_blank" rel="noopener noreferrer" class="wa-link">https://wa.me/</a>
-          <button id="copyBtn" class="copy-btn">Copy</button>
-        </div>
-        <p>You can also click the link to chat directly.</p>
-      </div>
-    </section>
+          <!-- Phone Mockup Visual -->
+          <div class="hero-visual" aria-hidden="true">
+            <div class="hero-phone-wrap">
+              <div class="hero-phone-glow"></div>
 
-    <!-- Preview Section -->
-    <section id="previewSection" class="preview-section">
-      <div class="wrap">
-        <h2>Preview (WhatsApp-style)</h2>
-        <p class="muted">This mock phone shows how the message will appear when a user clicks your link.</p>
+              <div class="phone-mockup">
+                <div class="phone-screen">
+                  <!-- Status bar -->
+                  <div class="phone-statusbar">
+                    <span>9:41</span>
+                    <span>▲ ●●● ⚡</span>
+                  </div>
+                  <!-- Chat header -->
+                  <div class="phone-header">
+                    <span class="phone-back-btn" aria-hidden="true">‹</span>
+                    <div class="phone-avatar">👤</div>
+                    <div class="phone-contact-info">
+                      <div class="phone-contact-name">+237 650 123 456</div>
+                      <div class="phone-contact-status">online</div>
+                    </div>
+                  </div>
+                  <!-- Chat body -->
+                  <div class="phone-chat-body">
+                    <div class="chat-date-chip">Today</div>
+                    <div class="chat-bubble received">
+                      Hello! 👋 How can I help you today?
+                      <span class="chat-bubble-time">09:38</span>
+                    </div>
+                    <div class="chat-bubble sent">
+                      Hi! I saw your offer and I'm interested. Can we chat?
+                      <span class="chat-bubble-time">09:41 ✓✓</span>
+                    </div>
+                  </div>
+                  <!-- Input bar -->
+                  <div class="phone-input-bar">
+                    <div class="phone-input-field">Type a message</div>
+                    <div class="phone-send-btn" aria-hidden="true">
+                      <svg width="16" height="16" viewBox="0 0 24 24">
+                        <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
 
-        <div class="phone-preview" role="region" aria-label="WhatsApp preview">
-          <div class="phone-top">
-            <p>👤</p>
-            <h3 id="preview-tel">+237683477634</h3>
+              <!-- Floating tag labels -->
+              <div class="phone-float-tags" aria-hidden="true">
+                <div class="phone-float-tag">
+                  <span class="tag-dot"></span>No login needed
+                </div>
+                <div class="phone-float-tag">
+                  <span class="tag-dot"></span>Pre-filled message
+                </div>
+                <div class="phone-float-tag">
+                  <span class="tag-dot"></span>One-tap contact
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="phone-body">
-            <div class="chat sent">Hi there, is this still available?</div>
-            <div class="chat received">Hello! Thanks for reaching out.</div>
-            <div class="chat sent" id="previewMessage">Hi! I saw your offer and I'm interested.</div>
-          </div>
-          <div class="phone-bottom">
-            <p class="input">Type in message</p>
-          </div>
-        </div>
-      </div>
-    </section>
 
-    <!-- Help / How to use -->
-    <section id="help" class="help-section">
-      <div class="wrap">
-        <h2>How to use Quick Wa Link</h2>
-        <ol>
-          <li>Choose your country from the list.</li>
-          <li>Enter the phone number without the leading zero or plus sign.</li>
-          <li>Write an optional default message to greet customers or qualify leads.</li>
-          <li>Click <strong>Generate Link</strong>, open the link to test, then copy to use in social posts.</li>
-          <li>Use <strong>Preview</strong> to check how the message looks on a phone mockup before you share.</li>
-          <li>You can also click on the link directly to chat on Whatsapp.</li>
-        </ol>
-        
-        <p class="note">Tip: Use short, friendly messages. Example: "Hi, I'm interested in your product, please send details."</p>
-      </div>
-    </section>
-
-    <!-- Blog Section -->
-    <section id="blog" class="blog-section">
-      <div class="wrap">
-        <h2>What’s new in Quick Wa Link v2</h2>
-        <p>Our new version comes with important upgrades including:</p>
-        <ul>
-          <li>Built-in preview that mimics WhatsApp chat, so you can test messages quickly</li>
-          <li>Optional message field to pre-fill customer texts</li>
-          <li>Contact form so users can report issues or suggest features</li>
-          <li>Clear sections and navigation for easy use and sharing</li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- About Developer -->
-    <section id="developer" class="developer-section">
-      <div class="wrap">
-        <h2>About the Developer</h2>
-        <div class="card">
-          <img src="images/dev-profile-picture.jpg" alt="profile picture" class="profile-picture">
-          <h3>Godlove Tikum</h3>
-        </div>
-        
-        <div class="card">
-          <p>Self-taught software engineer and accountant with focus on fast loading and high converting websites and mobile apps for SMEs. I built Quick Wa Link to ease up the process of getting a WhatsApp link for your marketing.<br><br>Want to reach me directly? Click any button below:</p>
-          <nav class="socials">
-            <a id="devWaLink" class="dev-wa" href="https://wa.me/237654841420?text=*Coming%20from%20Quick%20Wa%20Link*%0A%0AHello%20Gody..." target="_blank" rel="noopener noreferrer" data-whatsapp="+237654841420">WhatsApp</a>
-            <a id="devFbLink" href="https://godlovetikum.netlify.app" target="_blank" rel="noopener">More on my portfolio</a>
-          </nav>
         </div>
       </div>
     </section>
 
-    <!-- Contact / Feedback -->
-    <section id="contactSection" class="contact-section">
-      <div class="wrap">
-        <h2>Contact & Feedback</h2>
-        <p class="muted">Got a bug or a suggestion? Send a short message and I will respond.</p>
+    <!-- ── How It Works ──────────────────────────────────────── -->
+    <section class="section how-it-works" id="howItWorks" aria-labelledby="howItWorksTitle">
+      <div class="container">
 
-        <form id="contactForm" action="https://formsubmit.co/5938a3d424f2c96cc46c101212c7d51c" method="post">
-          <input type="hidden" name="_captcha" value="false">
-          <input type="hidden" name="_next" value="https://quickwalink.netlify.app/thanks">
-          
-          
-          <div class="input-group">
-            <label for="name">Name:</label>
-            <input id="name" name="name" type="text" placeholder="Your name" required />
+        <div class="reveal">
+          <p class="section-label">How It Works</p>
+          <h2 class="section-title" id="howItWorksTitle">Four Steps to Your Link</h2>
+          <p class="section-subtitle">
+            No technical knowledge required. Anyone can generate a professional WhatsApp link in under a minute.
+          </p>
+        </div>
+
+        <div class="steps-grid" role="list" aria-label="Steps to generate a WhatsApp link">
+
+          <div class="step-card reveal reveal-delay-1" role="listitem">
+            <div class="step-number" aria-hidden="true">01</div>
+            <div class="step-icon" aria-hidden="true">🌍</div>
+            <h3 class="step-title">Pick Your Country</h3>
+            <p class="step-desc">
+              Choose your country from our list of 200+ nations. The correct international dialling code is applied automatically.
+            </p>
           </div>
-          
-          <div class="input-group">
-            <label for="email">Email:</label>
-            <input id="email" name="email" type="email" placeholder="you@example.com" required />
+
+          <div class="step-card reveal reveal-delay-2" role="listitem">
+            <div class="step-number" aria-hidden="true">02</div>
+            <div class="step-icon" aria-hidden="true">📱</div>
+            <h3 class="step-title">Enter Your Number</h3>
+            <p class="step-desc">
+              Type your phone number without the leading zero or country prefix — just the local digits. Example: 650 123 456.
+            </p>
           </div>
-          
-          <div class="input-group">
-            <label for="subject">Subject:</label>
-            <input type="text" name="subject" id="subject" placeholder="Your Reason for messaging us" required>
+
+          <div class="step-card reveal reveal-delay-3" role="listitem">
+            <div class="step-number" aria-hidden="true">03</div>
+            <div class="step-icon" aria-hidden="true">✍️</div>
+            <h3 class="step-title">Write Your Message</h3>
+            <p class="step-desc">
+              Optionally add a greeting that auto-fills when someone clicks your link. Great for qualifying leads fast.
+            </p>
           </div>
-          
-          <div class="input-group">
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" rows="4" placeholder="Write your message..." required></textarea>
+
+          <div class="step-card reveal reveal-delay-4" role="listitem">
+            <div class="step-number" aria-hidden="true">04</div>
+            <div class="step-icon" aria-hidden="true">🔗</div>
+            <h3 class="step-title">Generate &amp; Share</h3>
+            <p class="step-desc">
+              Hit Generate, copy your link, and paste it anywhere — Instagram bio, Facebook post, email signature, or paid ads.
+            </p>
           </div>
-          
-          <div class="form-actions">
-            <button type="submit">Send Message</button>
+
+        </div>
+
+        <div class="section-divider" aria-hidden="true"></div>
+
+        <!-- Use Cases -->
+        <div id="useCases" aria-labelledby="useCasesTitle">
+          <div class="reveal">
+            <p class="section-label">Use Cases</p>
+            <h2 class="section-title" id="useCasesTitle">Who Uses Quick Wa Link?</h2>
+            <p class="section-subtitle">
+              Marketers, entrepreneurs, and creators worldwide use WhatsApp links to grow their business and connect with customers faster.
+            </p>
           </div>
-        </form>
+
+          <div class="use-cases-grid">
+
+            <article class="use-case-card reveal reveal-delay-1">
+              <div class="use-case-icon" aria-hidden="true">🛒</div>
+              <h3 class="use-case-title">E-commerce</h3>
+              <p class="use-case-desc">Let customers ask questions before purchasing — reduce cart abandonment with instant personal contact.</p>
+            </article>
+
+            <article class="use-case-card reveal reveal-delay-2">
+              <div class="use-case-icon" aria-hidden="true">🏠</div>
+              <h3 class="use-case-title">Real Estate</h3>
+              <p class="use-case-desc">Instantly connect with property inquirers. One link, zero friction — no number-saving required.</p>
+            </article>
+
+            <article class="use-case-card reveal reveal-delay-3">
+              <div class="use-case-icon" aria-hidden="true">💈</div>
+              <h3 class="use-case-title">Local Services</h3>
+              <p class="use-case-desc">Barbershops, salons, tutors — get bookings directly through WhatsApp with a pre-qualified message.</p>
+            </article>
+
+            <article class="use-case-card reveal reveal-delay-1">
+              <div class="use-case-icon" aria-hidden="true">📢</div>
+              <h3 class="use-case-title">Digital Marketing</h3>
+              <p class="use-case-desc">Run WhatsApp click campaigns on Facebook &amp; Instagram Ads with a direct wa.me link for max conversion.</p>
+            </article>
+
+            <article class="use-case-card reveal reveal-delay-2">
+              <div class="use-case-icon" aria-hidden="true">🎓</div>
+              <h3 class="use-case-title">Education</h3>
+              <p class="use-case-desc">Coaches and tutors use pre-filled messages to understand students before the very first session.</p>
+            </article>
+
+            <article class="use-case-card reveal reveal-delay-3">
+              <div class="use-case-icon" aria-hidden="true">💼</div>
+              <h3 class="use-case-title">Freelancers</h3>
+              <p class="use-case-desc">Drop your link in your portfolio or Upwork profile so clients reach you instantly, no cold emails needed.</p>
+            </article>
+
+          </div>
+        </div>
+
       </div>
     </section>
-    
-    <section class="close">
-      <h2>Enjoy our tool?</h2>
-      <p>Follow <strong>Godlove</strong> on Twitter (x)!<br> <a href="https://x.com/Godlovetikum" rel="noopener" target="_blank">@Godlovetikum</a></p>
+
+    <!-- ── About ─────────────────────────────────────────────── -->
+    <section class="section" id="about" aria-labelledby="aboutTitle">
+      <div class="container">
+        <h2 class="sr-only" id="aboutTitle">About Quick Wa Link &amp; Its Developer</h2>
+
+        <div class="about-inner">
+
+          <!-- Developer Card -->
+          <aside>
+            <div class="dev-card reveal">
+              <div class="dev-avatar-wrap">
+                <img
+                  src="https://godlovetikum.netlify.app/assets/images/godlove-tikum-profile.png"
+                  alt="Profile of Godlove Tikum — software engineer, developer of Quick Wa Link"
+                  class="dev-avatar"
+                  width="80"
+                  height="80"
+                  loading="lazy"
+                />
+                <div class="dev-avatar-badge" aria-hidden="true">👨‍💻</div>
+              </div>
+
+              <h3 class="dev-name">Godlove Tikum</h3>
+              <p class="dev-handle">@godlovetikum</p>
+
+              <p class="dev-bio">
+                Self-taught software engineer & Accountant. I built Quick Wa Link to solve a real problem I faced in my affiliate marketing business — getting customers to message me on WhatsApp without saving my number first.
+              </p>
+
+              <div class="dev-socials" role="list" aria-label="Social media links">
+
+                <a
+                  href="https://wa.me/237654841420?text=*From%20Quick%20Wa%20Link*%0AHello%20Godlove!"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="dev-social-btn wa-btn"
+                  role="listitem"
+                  aria-label="Chat with Godlove on WhatsApp"
+                >
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                  </svg>
+                  WhatsApp
+                </a>
+
+                <a href="https://facebook.com/godlovetikum" target="_blank" rel="noopener noreferrer" class="dev-social-btn" role="listitem" aria-label="Godlove on Facebook">
+                  Facebook
+                </a>
+
+                <a href="https://x.com/Godlovtikum" target="_blank" rel="noopener noreferrer" class="dev-social-btn" role="listitem" aria-label="Godlove on Twitter">
+                  Twitter (x)
+                </a>
+
+                <a href="https://godlovetikum.netlify.app" target="_blank" rel="noopener" class="dev-social-btn" role="listitem" aria-label="Godlove Tikum portfolio website">
+                  Portfolio ↗
+                </a>
+
+              </div>
+            </div>
+          </aside>
+
+          <!-- App Info -->
+          <div class="about-app-info">
+
+            <div class="reveal">
+              <p class="section-label">About the App</p>
+              <h3 class="section-title section-title--about">
+                Built for Marketers,<br />By a Marketer
+              </h3>
+              <p class="section-subtitle">
+                Quick Wa Link was created to eliminate the #1 friction point in WhatsApp marketing: asking customers to save your number before messaging you. With a single link, they can chat instantly.
+              </p>
+            </div>
+
+            <div class="app-features-grid">
+
+              <div class="app-feature reveal reveal-delay-1">
+                <span class="app-feature-icon" aria-hidden="true">⚡</span>
+                <div>
+                  <strong class="app-feature-title">Instant</strong>
+                  <p class="app-feature-desc">Links generate in under 2 seconds, no page reloads or API calls needed.</p>
+                </div>
+              </div>
+
+              <div class="app-feature reveal reveal-delay-2">
+                <span class="app-feature-icon" aria-hidden="true">🔒</span>
+                <div>
+                  <strong class="app-feature-title">Private</strong>
+                  <p class="app-feature-desc">We never store your phone number or message. Everything stays in your browser.</p>
+                </div>
+              </div>
+
+              <div class="app-feature reveal reveal-delay-3">
+                <span class="app-feature-icon" aria-hidden="true">📲</span>
+                <div>
+                  <strong class="app-feature-title">Universal</strong>
+                  <p class="app-feature-desc">Works on any device and any browser — mobile, tablet, or desktop.</p>
+                </div>
+              </div>
+
+              <div class="app-feature reveal reveal-delay-4">
+                <span class="app-feature-icon" aria-hidden="true">🌐</span>
+                <div>
+                  <strong class="app-feature-title">Global</strong>
+                  <p class="app-feature-desc">200+ country codes covering every nation where WhatsApp is used.</p>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="changelog reveal">
+              <h4 class="changelog-title">What's New in v3.0</h4>
+              <ul class="changelog-list">
+                <li>Rebuilt as a clean HTML/CSS/JS site — faster and more reliable</li>
+                <li>Progressive Web App (PWA) — install it on any device</li>
+                <li>Live WhatsApp-style phone preview on the app page</li>
+                <li>Improved contact form via Netlify Functions</li>
+                <li>Full accessibility (WCAG 2.1 AA) improvements</li>
+                <li>Dark-mode-first UI with polished design system</li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </div>
     </section>
 
-    <footer class="site-footer">
-      <div class="wrap">
-        <i>&COPY; <span id="year"></span> Quick Wa Link — Built by <a href="https://godlovetikum.netlify.app" rel="noopener">Godlove Tikum</a></i>
+    <!-- ── Contact ───────────────────────────────────────────── -->
+    <section class="section" id="contact" aria-labelledby="contactTitle">
+      <div class="container">
+
+        <!-- Success state (hidden until form submitted) -->
+        <div id="contactSuccessState" class="is-hidden" aria-live="polite">
+          <div class="success-state">
+            <div class="success-icon" aria-hidden="true">✅</div>
+            <h2 class="success-title">Message sent successfully!</h2>
+            <p class="success-text">
+              Thank you for reaching out. Godlove will reply within 24 hours.
+              In the meantime, connect on socials below.
+            </p>
+            <div class="success-actions">
+              <a href="https://facebook.com/godlovetikum101" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Facebook</a>
+              <a href="https://x.com/Godlovtikum"   target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Twitter (x)</a>
+              <button class="btn btn-primary" id="sendAnotherBtn" type="button">Send Another Message</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Form state -->
+        <div id="contactFormState">
+          <div class="contact-inner">
+
+            <!-- Info column -->
+            <div class="contact-info-col reveal">
+              <p class="section-label">Get in Touch</p>
+              <h2 class="section-title" id="contactTitle">Contact &amp; Feedback</h2>
+              <p class="section-subtitle contact-subtitle">
+                I build and improve every project with user feedback. I (Godlove) am anxiously awaiting your opinion and experience about this app.
+                If you enjoy the tool, or have feedback, a feature to suggest or just wanna collaborate with me, reach out through WhatsApp, 
+                or check out my website (portfolio) or simply use the contact form below. Either ways, I will surely respond.
+              </p>
+
+              <div class="contact-methods" role="list" aria-label="Contact methods">
+
+                <a
+                  href="https://wa.me/237654841420?text=*From%20Quick%20Wa%20Link%20Contact%20Form*%0AHello%20Godlove!"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="contact-method"
+                  role="listitem"
+                >
+                  <span class="contact-method-icon fab fa-whatsapp" aria-hidden="true"></span>
+                  <div>
+                    <div class="contact-method-label">WhatsApp</div>
+                    <div class="contact-method-hint">Fastest response — usually within the hour</div>
+                  </div>
+                  <span class="contact-method-arrow" aria-hidden="true">→</span>
+                </a>
+
+                <a
+                  href="https://godlovetikum.netlify.app"
+                  target="_blank"
+                  rel="noopener"
+                  class="contact-method"
+                  role="listitem"
+                >
+                  <span class="contact-method-icon fas fa-laptop" aria-hidden="true"></span>
+                  <div>
+                    <div class="contact-method-label">Portfolio</div>
+                    <div class="contact-method-hint">See more of my projects and work</div>
+                  </div>
+                  <span class="contact-method-arrow" aria-hidden="true">→</span>
+                </a>
+
+              </div>
+            </div>
+
+            <!-- Form -->
+            <div class="contact-form-card reveal reveal-delay-2">
+              <form id="contactForm" novalidate aria-label="Contact form" action="javascript:void(0);">
+
+                <div class="contact-form-body">
+
+                  <div class="contact-form-grid">
+                    <div class="form-group">
+                      <label for="contactName" class="form-label">Name</label>
+                      <input
+                        id="contactName"
+                        name="name"
+                        type="text"
+                        class="form-control"
+                        placeholder="Your name"
+                        required
+                        autocomplete="name"
+                      />
+                    </div>
+                    <div class="form-group">
+                      <label for="contactEmail" class="form-label">Email</label>
+                      <input
+                        id="contactEmail"
+                        name="email"
+                        type="email"
+                        class="form-control"
+                        placeholder="you@example.com"
+                        required
+                        autocomplete="email"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="contactSubject" class="form-label">Subject</label>
+                    <select id="contactSubject" name="subject" class="form-control" required>
+                      <option value="">— Select a subject —</option>
+                      <option value="Bug Report">Bug Report</option>
+                      <option value="Feature Request">Feature Request</option>
+                      <option value="General Feedback">General Feedback</option>
+                      <option value="Business Inquiry">Business Inquiry</option>
+                      <option value="Partnership">Partnership</option>
+                      <option value="Other">Other</option>
+                    </select>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="contactMessage" class="form-label">Message</label>
+                    <textarea
+                      id="contactMessage"
+                      name="message"
+                      class="form-control"
+                      rows="5"
+                      placeholder="Describe your bug, idea, or question…"
+                      required
+                      minlength="10"
+                      maxlength="2000"
+                    ></textarea>
+                    <div class="char-counter" id="contactMsgCharCount" aria-live="polite">0/2000</div>
+                  </div>
+
+                  <button
+                    id="contactSubmitBtn"
+                    type="submit"
+                    class="btn btn-primary btn-full"
+                  >
+                    Send Message →
+                  </button>
+
+                  <p class="privacy-note">
+                    <i class="fas fa-lock"></i> By submiting this form, you acknowledge that you accept to receive emails from our team?
+                  </p>
+
+                </div>
+              </form>
+            </div>
+
+          </div>
+        </div>
+
       </div>
-    </footer>
+    </section>
+
   </main>
-  
-  <script src="JavaScript.js"></script>
+
+  <!-- ── Site Footer ──────────────────────────────────────── -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+
+        <div class="footer-brand">
+          <a href="/" class="header-brand" aria-label="Quick Wa Link">
+            <img src="/assets/icons/icon.svg" alt="" class="brand-icon" width="36" height="36" aria-hidden="true" />
+            <div class="brand-text">
+              <span class="brand-name">Quick Wa Link</span>
+              <span class="brand-tagline">Free — forever.</span>
+            </div>
+          </a>
+          <p>The simplest way to create WhatsApp click-to-chat links with pre-filled messages.</p>
+        </div>
+
+        <nav aria-label="Footer navigation">
+          <p class="footer-nav-title">Navigation</p>
+          <ul class="footer-nav-list">
+            <li><a href="/dashboard/"   class="footer-nav-link">Generate Link</a></li>
+            <li><a href="#howItWorks" class="footer-nav-link">How It Works</a></li>
+            <li><a href="#useCases"   class="footer-nav-link">Use Cases</a></li>
+            <li><a href="#about"      class="footer-nav-link">About</a></li>
+            <li><a href="#contact"    class="footer-nav-link">Contact</a></li>
+            <li><a href="https://godlovetikum.netlify.app" target="_blank"  class="footer-nav-link">Developer ↗</a></li>
+          </ul>
+        </nav>
+
+        <div>
+          <p class="footer-social-title">Find Godlove online</p>
+          <ul class="footer-social-list" role="list" aria-label="Social media links">
+            <li>
+              <a href="https://facebook.com/godlovetikum101"  
+                target="_blank" rel="noopener noreferrer" 
+                class="footer-social-link" aria-label="Facebook">
+                <i class="fab fa-facebook" aria-hidden="true"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://x.com/@godlovetikum"    
+                target="_blank" rel="noopener noreferrer" 
+                class="footer-social-link" aria-label="Twitter">
+                <i class="fab fa-twitter" aria-hidden="true"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://instagram.com/godlovtikum" 
+                target="_blank" rel="noopener noreferrer"
+                class="footer-social-link" aria-label="Instagram">
+                <i class="fab fa-instagram" aria-hidden="true"></i>
+                </a>
+            </li>
+            <li>
+              <a href="https://youtube.com/@godlovtikum"  
+                target="_blank" rel="noopener noreferrer" 
+                class="footer-social-link" aria-label="YouTube">
+                <i class="fab fa-youtube" aria-hidden="true"></i>
+                </a>
+            </li>
+            <li>
+              <a href="https://wa.me/237654841420"
+                target="_blank" rel="noopener noreferrer" 
+                class="footer-social-link" aria-label="WhatsApp">
+                  <i class="fab fa-whatsapp" aria-hidden="true"></i>
+                </a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+        <div class="footer_meta">
+            <a href="/llms.txt"    class="footer_meta_link" rel="nofollow">llms.txt</a>
+            <a href="/sitemap.xml" class="footer_meta_link" rel="nofollow">Sitemap</a>
+            <a href="/robots.txt"  class="footer_meta_link" rel="nofollow">robots.txt</a>
+        </div>
+        <a href="/llms.txt" class="footer_crawler" aria-hidden="true" tabindex="-1">llms.txt</a>
+
+      <div class="footer-bottom">
+        <p class="footer-copy">
+          &copy; <span id="footerYear">2026</span> Quick Wa Link &mdash; Built by
+          <a href="https://godlovetikum.netlify.app" target="_blank" rel="noopener">Godlove Tikum (@godlovtikum)</a>.
+          MIT License.
+        </p>
+        <p class="footer-disclaimer">
+          Not affiliated with WhatsApp Inc. or Meta Platforms.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts — load last, content already in DOM -->
+  <script src="/assets/js/shared.js"></script>
+  <script src="/assets/js/app.js"></script>
   <script>
-    // Auto-update footer year
-    document.getElementById("year").textContent = new Date().getFullYear();
+    const footerYearEl = document.getElementById('footerYear');
+    if (footerYearEl) footerYearEl.textContent = new Date().getFullYear();
+    new window.QWL.ThemeManager();
+    new window.QWL.SiteHeader();
+    new window.QWL.ScrollReveal();
+    new window.QWL.ServiceWorkerManager();
   </script>
+
 </body>
 </html>

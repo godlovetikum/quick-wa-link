@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Page Not Found — Quick Wa Link</title>
+  <meta name="robots"      content="noindex, follow" />
+  <meta name="theme-color" content="#075e54" />
+
+  <link rel="canonical" href="https://quickwalink.netlify.app/" />
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/svg+xml"           href="/assets/icons/icon.svg" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/icon-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/icon-16.png" />
+  <link rel="apple-touch-icon"                    href="/assets/icons/icon-192.png" />
+
+  <!-- Theme: run before stylesheets to prevent light/dark flash -->
+  <script>
+    (function () {
+      var saved = localStorage.getItem('qwl-theme');
+      var sys   = window.matchMedia('(prefers-color-scheme:light)').matches ? 'light' : 'dark';
+      if ((saved || sys) === 'light') document.documentElement.setAttribute('data-theme', 'light');
+    })();
+  </script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="/assets/css/main.css" />
+  <link rel="stylesheet" href="/assets/css/icons/fonts_awesome.css" />
+
+  <style>
+    .error-section {
+      min-height: calc(100vh - var(--header-height) - 320px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: var(--space-16) var(--space-5);
+    }
+    .error-inner { text-align: center; max-width: 520px; }
+    .error-code {
+      font-family: var(--font-display);
+      font-size: clamp(6rem, 20vw, 10rem);
+      font-weight: 800;
+      line-height: 1;
+      background: linear-gradient(135deg, var(--green-500), var(--green-700));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: var(--space-4);
+      user-select: none;
+    }
+    .error-title {
+      font-family: var(--font-display);
+      font-size: clamp(1.25rem, 4vw, 1.75rem);
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: var(--space-4);
+    }
+    .error-desc {
+      font-size: 1rem;
+      color: var(--text-secondary);
+      line-height: 1.7;
+      margin-bottom: var(--space-8);
+    }
+    .error-actions {
+      display: flex;
+      gap: var(--space-3);
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+  </style>
+</head>
+<body>
+
+  <a href="#mainContent" class="skip-link">Skip to main content</a>
+
+  <!-- ── Site Header ─────────────────────────────────────── -->
+  <header class="site-header" id="siteHeader" role="banner">
+    <div class="container">
+      <div class="header-inner">
+
+        <a href="/" class="header-brand" aria-label="Quick Wa Link — Back to home">
+          <img src="/assets/icons/icon.svg" alt="" class="brand-icon" width="36" height="36" aria-hidden="true" />
+          <div class="brand-text">
+            <span class="brand-name">Quick Wa Link</span>
+            <span class="brand-tagline">WhatsApp Link Generator</span>
+          </div>
+        </a>
+
+        <nav class="nav-links" aria-label="Site navigation">
+          <a href="/"            class="nav-link">Home</a>
+          <a href="/#howItWorks" class="nav-link">How It Works</a>
+          <a href="/#about"      class="nav-link">About</a>
+          <a href="/#contact"    class="nav-link">Contact</a>
+        </nav>
+
+        <div class="header-cta">
+          <button class="theme-toggle" id="themeToggle" aria-label="Switch to light mode" aria-pressed="false">
+            <svg class="icon-sun" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="4"/>
+              <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/>
+            </svg>
+            <svg class="icon-moon" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/>
+            </svg>
+          </button>
+          <a href="/dashboard/" class="btn btn-primary btn-sm">Generate Link →</a>
+        </div>
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobileNav">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation -->
+  <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation" aria-hidden="true">
+    <div class="mobile-nav-links">
+      <a href="/#howItWorks" class="mobile-nav-link">How It Works</a>
+      <a href="/#useCases"   class="mobile-nav-link">Use Cases</a>
+      <a href="/#about"      class="mobile-nav-link">About</a>
+      <a href="/#contact"    class="mobile-nav-link">Contact</a>
+    </div>
+    <a href="/dashboard/" class="btn btn-primary btn-full">
+      Generate My Link →
+    </a>
+  </nav>
+
+  <!-- ── Main Content ─────────────────────────────────────── -->
+  <main id="mainContent">
+    <section class="error-section" aria-labelledby="errorTitle">
+      <div class="error-inner reveal">
+        <div class="error-code" aria-hidden="true">404</div>
+        <h1 class="error-title" id="errorTitle">Page Not Found</h1>
+        <p class="error-desc">
+          The page you're looking for doesn't exist or may have moved.<br>
+          Let's get you back on track.
+        </p>
+        <div class="error-actions">
+          <a href="/"           class="btn btn-secondary">← Back to Home</a>
+          <a href="/dashboard/" class="btn btn-primary">Generate a Link →</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ── Site Footer ──────────────────────────────────────── -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+
+        <div class="footer-brand">
+          <a href="/" class="header-brand" aria-label="Quick Wa Link">
+            <img src="/assets/icons/icon.svg" alt="" class="brand-icon" width="36" height="36" aria-hidden="true" />
+            <div class="brand-text">
+              <span class="brand-name">Quick Wa Link</span>
+              <span class="brand-tagline">Free — forever.</span>
+            </div>
+          </a>
+          <p>The simplest way to create WhatsApp click-to-chat links with pre-filled messages.</p>
+        </div>
+
+        <nav aria-label="Footer navigation">
+          <p class="footer-nav-title">Navigation</p>
+          <ul class="footer-nav-list">
+            <li><a href="/dashboard/"  class="footer-nav-link">Generate Link</a></li>
+            <li><a href="/#howItWorks" class="footer-nav-link">How It Works</a></li>
+            <li><a href="/#useCases"   class="footer-nav-link">Use Cases</a></li>
+            <li><a href="/#about"      class="footer-nav-link">About</a></li>
+            <li><a href="/#contact"    class="footer-nav-link">Contact</a></li>
+            <li><a href="https://godlovetikum.netlify.app" target="_blank" class="footer-nav-link">Developer ↗</a></li>
+          </ul>
+        </nav>
+
+        <div>
+          <p class="footer-social-title">Find Godlove online</p>
+          <ul class="footer-social-list" role="list" aria-label="Social media links">
+            <li>
+              <a href="https://facebook.com/godlovetikum101" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="Facebook">
+                <i class="fab fa-facebook" aria-hidden="true"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://x.com/@godlovetikum" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="Twitter">
+                <i class="fab fa-twitter" aria-hidden="true"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://instagram.com/godlovtikum" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="Instagram">
+                <i class="fab fa-instagram" aria-hidden="true"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://youtube.com/@godlovtikum" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="YouTube">
+                <i class="fab fa-youtube" aria-hidden="true"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://wa.me/237654841420" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="WhatsApp">
+                <i class="fab fa-whatsapp" aria-hidden="true"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copy">
+          &copy; <span id="footerYear">2026</span> Quick Wa Link &mdash; Built by
+          <a href="https://godlovetikum.netlify.app" target="_blank" rel="noopener">Godlove Tikum (@godlovtikum)</a>.
+          MIT License.
+        </p>
+        <p class="footer-disclaimer">Not affiliated with WhatsApp Inc. or Meta Platforms.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/assets/js/shared.js"></script>
+  <script>
+    const footerYearEl = document.getElementById('footerYear');
+    if (footerYearEl) footerYearEl.textContent = new Date().getFullYear();
+    new window.QWL.ThemeManager();
+    new window.QWL.SiteHeader();
+    new window.QWL.ScrollReveal();
+  </script>
+
+</body>
+</html>

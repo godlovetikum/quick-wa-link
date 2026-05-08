@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630">
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="#0b1215"/>
+
+  <!-- Ambient glow blobs -->
+  <circle cx="980" cy="80"  r="340" fill="rgba(37,211,102,0.055)"/>
+  <circle cx="980" cy="80"  r="200" fill="rgba(37,211,102,0.045)"/>
+  <circle cx="160" cy="560" r="240" fill="rgba(18,140,126,0.04)"/>
+
+  <!-- Top-left accent bar -->
+  <rect x="80" y="76" width="4" height="52" rx="2" fill="#25d366"/>
+
+  <!-- Brand logo circle -->
+  <circle cx="100" cy="66" r="30" fill="#25d366"/>
+  <!-- WhatsApp speech-bubble path inside logo -->
+  <path d="M100 46 a20 20 0 0 1 0 40 a19.5 19.5 0 0 1-10-2.8l-7 2 2-7a19.5 19.5 0 0 1-5-13.2 a20 20 0 0 1 20-19z" fill="white" opacity="0.9"/>
+
+  <!-- Brand name beside logo -->
+  <text x="142" y="58" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="18" font-weight="bold" fill="#a8bfba" letter-spacing="1">QUICK</text>
+  <text x="142" y="82" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="20" font-weight="bold" fill="#f0f6f4" letter-spacing="1">WA LINK</text>
+
+  <!-- Divider -->
+  <line x1="80" y1="136" x2="720" y2="136" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+
+  <!-- Main headline -->
+  <text x="80" y="230" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="70" font-weight="bold" fill="#f0f6f4">Free WhatsApp</text>
+  <text x="80" y="318" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="70" font-weight="bold" fill="#25d366">Link Generator</text>
+
+  <!-- Subline -->
+  <text x="80" y="378" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="24" fill="#a8bfba">Create wa.me links with pre-filled messages.</text>
+  <text x="80" y="412" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="24" fill="#a8bfba">Instant · No sign-up · Free forever.</text>
+
+  <!-- Feature pills -->
+  <rect x="80"  y="448" width="148" height="38" rx="19" fill="rgba(37,211,102,0.12)" stroke="rgba(37,211,102,0.25)" stroke-width="1"/>
+  <text x="154" y="472" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="15" font-weight="bold" fill="#25d366" text-anchor="middle">&#10003; 199 Countries</text>
+
+  <rect x="244" y="448" width="148" height="38" rx="19" fill="rgba(37,211,102,0.12)" stroke="rgba(37,211,102,0.25)" stroke-width="1"/>
+  <text x="318" y="472" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="15" font-weight="bold" fill="#25d366" text-anchor="middle">&#10003; Instant Preview</text>
+
+  <rect x="408" y="448" width="138" height="38" rx="19" fill="rgba(37,211,102,0.12)" stroke="rgba(37,211,102,0.25)" stroke-width="1"/>
+  <text x="477" y="472" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="15" font-weight="bold" fill="#25d366" text-anchor="middle">&#10003; PWA Support</text>
+
+  <!-- Bottom rule + URL -->
+  <line x1="80" y1="512" x2="720" y2="512" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+  <circle cx="90" cy="548" r="5" fill="#25d366"/>
+  <text x="106" y="554" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="20" fill="#5e7a74">quickwalink.netlify.app</text>
+
+  <!-- ── Right: Phone mockup silhouette ─────────────────── -->
+  <!-- Phone body -->
+  <rect x="810" y="90" width="300" height="520" rx="42" fill="none" stroke="rgba(37,211,102,0.18)" stroke-width="2"/>
+  <rect x="822" y="102" width="276" height="496" rx="32" fill="#111a1e"/>
+
+  <!-- Notch / status bar -->
+  <rect x="822" y="102" width="276" height="44" rx="32" fill="#075e54"/>
+  <rect x="822" y="124"  width="276" height="22" fill="#075e54"/>
+  <!-- Avatar circle in status bar -->
+  <circle cx="869" cy="124" r="15" fill="#128c7e"/>
+  <text x="869" y="130" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="14" fill="white" text-anchor="middle" font-weight="bold">G</text>
+  <!-- Contact name -->
+  <text x="893" y="120" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="12" font-weight="bold" fill="white">Godlove Tikum</text>
+  <text x="893" y="135" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="10" fill="rgba(255,255,255,0.65)">online</text>
+
+  <!-- Chat body background -->
+  <rect x="822" y="146" width="276" height="394" fill="#ECE5DD"/>
+
+  <!-- Chat date chip -->
+  <rect x="912" y="158" width="76" height="22" rx="11" fill="rgba(11,18,21,0.45)"/>
+  <text x="950" y="173" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="10" fill="rgba(255,255,255,0.85)" text-anchor="middle">TODAY</text>
+
+  <!-- Received bubble -->
+  <rect x="834" y="192" width="190" height="52" rx="10" fill="white"/>
+  <text x="846" y="213" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="11" fill="#111">Hi! I'm interested in your</text>
+  <text x="846" y="229" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="11" fill="#111">offer. Can we talk?</text>
+  <text x="1012" y="239" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="9" fill="#888">09:41</text>
+
+  <!-- Sent bubble 1 -->
+  <rect x="880" y="258" width="206" height="52" rx="10" fill="#d9fdd3"/>
+  <text x="892" y="279" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="11" fill="#111">Sure! I'll send you the</text>
+  <text x="892" y="295" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="11" fill="#111">details right away.</text>
+  <text x="1070" y="304" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="9" fill="#5d7d6e">09:42 ✓✓</text>
+
+  <!-- Received bubble 2 -->
+  <rect x="834" y="324" width="170" height="36" rx="10" fill="white"/>
+  <text x="846" y="347" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="11" fill="#111">Generated with Quick Wa Link!</text>
+  <text x="992" y="355" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="9" fill="#888">09:43</text>
+
+  <!-- Sent bubble 2 -->
+  <rect x="900" y="374" width="186" height="36" rx="10" fill="#d9fdd3"/>
+  <text x="912" y="397" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="11" fill="#111">Awesome tool! 🔥 Thanks!</text>
+  <text x="1070" y="405" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="9" fill="#5d7d6e">09:44 ✓✓</text>
+
+  <!-- Input bar -->
+  <rect x="822" y="540" width="276" height="56" fill="#f0f0f0"/>
+  <rect x="834" y="552" width="206" height="32" rx="16" fill="white"/>
+  <text x="850" y="572" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="11" fill="#aaa">Type a message</text>
+  <!-- Send button -->
+  <circle cx="1068" cy="568" r="16" fill="#25d366"/>
+  <text x="1068" y="574" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="14" fill="white" text-anchor="middle">&#x27A4;</text>
+
+  <!-- Phone bottom bar -->
+  <rect x="822" y="564" width="276" height="34" rx="0" fill="none"/>
+  <rect x="922" y="574" width="56" height="4" rx="2" fill="rgba(0,0,0,0.15)"/>
+
+  <!-- Floating tag top-right of phone -->
+  <rect x="1070" y="140" width="115" height="32" rx="16" fill="#172028" stroke="rgba(37,211,102,0.25)" stroke-width="1"/>
+  <circle cx="1086" cy="156" r="5" fill="#25d366"/>
+  <text x="1095" y="161" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="12" font-weight="bold" fill="#a8bfba">wa.me link</text>
+
+  <!-- Floating tag bottom-left of phone -->
+  <rect x="696" y="390" width="120" height="32" rx="16" fill="#172028" stroke="rgba(37,211,102,0.25)" stroke-width="1"/>
+  <circle cx="712" cy="406" r="5" fill="#25d366"/>
+  <text x="721" y="411" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="12" font-weight="bold" fill="#a8bfba">pre-filled msg</text>
+
+</svg>

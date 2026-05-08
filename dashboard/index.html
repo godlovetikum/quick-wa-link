@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="google-site-verification" content="a2Xe9n2LEOxR5Y1d8Mcm4lB1Clta56-SOBj-C-99ik8" />
+  <!-- Primary Meta -->
+  <title>Create WhatsApp Link — Quick Wa Link Generator</title>
+  <meta name="title"       content="Create WhatsApp Link — Quick Wa Link Generator" />
+  <meta name="description" content="Generate your free WhatsApp wa.me link with a pre-filled message in seconds. Pick your country, enter your number, write a message, done." />
+  <meta name="robots"      content="index, follow" />
+  <meta name="theme-color" content="#075e54" />
+  <meta name="author"      content="Godlove Tikum" />
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://quickwalink.netlify.app/dashboard/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:url"         content="https://quickwalink.netlify.app/dashboard/" />
+  <meta property="og:title"       content="Create WhatsApp Link — Quick Wa Link Generator" />
+  <meta property="og:description" content="Generate a free wa.me link with a pre-filled message. No sign-up needed." />
+  <meta property="og:image"       content="https://quickwalink.netlify.app/assets/images/og-image.png" />
+
+  <!-- PWA -->
+  <link rel="manifest" href="/manifest.json" />
+  <meta name="apple-mobile-web-app-capable"           content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style"  content="black-translucent" />
+  <meta name="apple-mobile-web-app-title"             content="Quick Wa Link" />
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/svg+xml"           href="/assets/icons/icon.svg" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/icon-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/icon-16.png" />
+  <link rel="shortcut icon" type="image/png" href="/assets/icons/icon-32.png" />
+  <link rel="apple-touch-icon" href="/assets/icons/icon-192.png" />
+
+  <!-- Theme: run before stylesheets to prevent light/dark flash -->
+  <script>
+    (function () {
+      var saved = localStorage.getItem('qwl-theme');
+      var sys   = window.matchMedia('(prefers-color-scheme:light)').matches ? 'light' : 'dark';
+      if ((saved || sys) === 'light') document.documentElement.setAttribute('data-theme', 'light');
+    })();
+  </script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="/assets/css/main.css" />
+  <link rel="stylesheet" href="/assets/css/app.css" />
+  <link rel="stylesheet" href="/assets/css/icons/fonts_awesome.css" />
+</head>
+<body class="app-page">
+
+  <!-- Skip Navigation -->
+  <a href="#mainContent" class="skip-link">Skip to main content</a>
+
+  <!-- ── Site Header ─────────────────────────────────────── -->
+  <header class="site-header" id="siteHeader" role="banner">
+    <div class="container">
+      <div class="header-inner">
+
+        <a href="/" class="header-brand" aria-label="Quick Wa Link — Back to home">
+          <img src="/assets/icons/icon.svg" alt="" class="brand-icon" width="36" height="36" aria-hidden="true" />
+          <div class="brand-text">
+            <span class="brand-name">Quick Wa Link</span>
+            <span class="brand-tagline">WhatsApp Link Generator</span>
+          </div>
+        </a>
+
+        <nav class="nav-links" aria-label="App navigation">
+          <a href="/"           class="nav-link">Home</a>
+          <a href="#generator"  class="nav-link active">Generator</a>
+          <a href="#previewPanel" class="nav-link">Preview</a>
+          <a href="/#contact"   class="nav-link">Contact</a>
+        </nav>
+
+        <div class="header-cta">
+          <button class="theme-toggle" id="themeToggle" aria-label="Switch to light mode" aria-pressed="false">
+            <svg class="icon-sun" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="4"/>
+              <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/>
+            </svg>
+            <svg class="icon-moon" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/>
+            </svg>
+          </button>
+        </div>
+
+        <button
+          class="menu-toggle"
+          id="menuToggle"
+          aria-label="Open navigation menu"
+          aria-expanded="false"
+          aria-controls="mobileNav"
+        >
+          <span></span><span></span><span></span>
+        </button>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation -->
+  <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation" aria-hidden="true">
+    <div class="mobile-nav-links">
+      <a href="/"            class="mobile-nav-link">← Home</a>
+      <a href="#generator"   class="mobile-nav-link">Generator</a>
+      <a href="#previewPanel" class="mobile-nav-link">Preview</a>
+    </div>
+    <a href="/#contact" class="btn btn-primary btn-full">
+      Contact us
+    </a>
+  </nav>
+
+  <!-- ── Main Content ─────────────────────────────────────── -->
+  <main id="mainContent">
+
+    <!-- ── App Hero Bar ──────────────────────────────────────── -->
+    <section class="app-hero" aria-label="App introduction">
+      <div class="container">
+        <div class="app-hero-inner">
+          <div class="app-hero-text">
+            <h1 class="app-hero-title">
+              Create Your WhatsApp Link
+            </h1>
+            <p class="app-hero-sub">
+              Pick a country, enter your number, add an optional pre-filled message — and get a shareable wa.me link in under 5 seconds. No account needed.
+            </p>
+          </div>
+
+          <div class="app-hero-chips" aria-label="Feature highlights">
+            <span class="app-hero-chip">
+              <span aria-hidden="true">✓</span> No account needed
+            </span>
+            <span class="app-hero-chip">
+              <span aria-hidden="true">✓</span> Works worldwide
+            </span>
+            <span class="app-hero-chip">
+              <span aria-hidden="true">✓</span> Free forever
+            </span>
+            <span class="app-hero-chip">
+              <span aria-hidden="true">✓</span> Mobile optimised
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Generator + Preview Workspace ────────────────────── -->
+    <section class="app-workspace" id="generator" aria-labelledby="generatorTitle">
+      <div class="container">
+        <h2 class="sr-only" id="generatorTitle">WhatsApp Link Generator</h2>
+
+        <div class="workspace-grid">
+
+          <!-- ── Generator Panel ──────────────────────────────── -->
+          <div>
+            <div class="generator-panel" aria-label="Link generator form">
+              <!-- Panel header -->
+              <div class="panel-header">
+                <div class="panel-header-icon" aria-hidden="true">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--green-500)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/>
+                    <path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/>
+                  </svg>
+                </div>
+                <div>
+                  <p class="panel-title">Link Generator</p>
+                  <p class="panel-subtitle">Fill in the fields below</p>
+                </div>
+              </div>
+
+              <!-- Panel body — form -->
+              <div class="panel-body">
+                <form id="generatorForm" novalidate aria-label="WhatsApp link generator">
+
+                  <!-- Country Code -->
+                  <div class="form-group">
+                    <label for="countryCodeSelect" class="form-label">
+                      Country Code
+                    </label>
+                    <!--
+                      Options populated by LinkGenerator._populateCountrySelect()
+                      Static fallback option provided here before JS loads
+                    -->
+                    <select
+                      id="countryCodeSelect"
+                      name="countryCode"
+                      class="form-control"
+                      required
+                      aria-describedby="countryCodeHint"
+                    >
+                      <option value="237" selected>🇨🇲 Cameroon (+237)</option>
+                    </select>
+                    <p id="countryCodeHint" class="sr-only">Select the country for the phone number</p>
+                  </div>
+
+                  <!-- Phone Number -->
+                  <div class="form-group">
+                    <label for="phoneNumberInput" class="form-label">
+                      Phone Number
+                      <span class="form-hint">digits only, no leading 0</span>
+                    </label>
+                    <div class="phone-row">
+                      <div
+                        class="phone-prefix-badge active"
+                        id="phonePrefixDisplay"
+                        aria-live="polite"
+                        aria-label="Selected country dial code"
+                      >
+                        +237
+                      </div>
+                      <div class="phone-input-wrap">
+                        <input
+                          id="phoneNumberInput"
+                          name="phoneNumber"
+                          type="tel"
+                          inputmode="numeric"
+                          class="form-control"
+                          placeholder="e.g. 650123456"
+                          pattern="\d{7,15}"
+                          maxlength="15"
+                          required
+                          autocomplete="tel-local"
+                          aria-describedby="phoneNumberHint"
+                        />
+                      </div>
+                    </div>
+                    <p id="phoneNumberHint" class="sr-only">Enter your local phone number without the country prefix or leading zero, 7 to 15 digits</p>
+                  </div>
+
+                  <!-- Pre-filled Message -->
+                  <div class="form-group">
+                    <label for="messageTextarea" class="form-label">
+                      Pre-filled Message
+                      <span class="form-hint">(optional)</span>
+                    </label>
+                    <textarea
+                      id="messageTextarea"
+                      name="message"
+                      class="form-control"
+                      rows="4"
+                      placeholder="Hi! I saw your offer and I'm interested. Can we chat?"
+                      maxlength="800"
+                      aria-describedby="messageCharCount"
+                    ></textarea>
+                    <div class="char-counter" id="messageCharCount" aria-live="polite">0/800</div>
+                  </div>
+
+                  <!-- Action Buttons -->
+                  <div class="generator-actions">
+                    <button
+                      type="submit"
+                      class="btn btn-primary generate-btn"
+                      id="generateBtn"
+                    >
+                      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true">
+                        <circle cx="12" cy="12" r="10"/>
+                        <line x1="12" y1="8" x2="12" y2="16"/>
+                        <line x1="8" y1="12" x2="16" y2="12"/>
+                      </svg>
+                      Generate Link
+                    </button>
+
+                    <button
+                      type="button"
+                      class="btn btn-secondary"
+                      id="previewBtn"
+                      aria-label="Scroll to WhatsApp preview"
+                    >
+                      Preview
+                    </button>
+
+                    <button
+                      type="button"
+                      class="btn btn-ghost is-hidden"
+                      id="resetBtn"
+                      aria-label="Reset the form and clear all fields"
+                    >
+                      ↺ Reset
+                    </button>
+                  </div>
+
+                </form>
+              </div>
+            </div>
+
+            <!-- ── Output Card ──────────────────────────────── -->
+            <div
+              class="output-card"
+              id="outputCard"
+              aria-live="polite"
+              aria-atomic="true"
+              aria-label="Generated link output"
+            >
+              <!-- Status bar -->
+              <div class="output-header">
+                <span class="output-status-dot" id="outputStatusDot" aria-hidden="true"></span>
+                <span class="output-label" id="outputLabel">Waiting for input…</span>
+              </div>
+
+              <!-- Body -->
+              <div class="output-body">
+
+                <!-- Empty state — visible before generation -->
+                <div class="output-empty" id="outputEmptyState">
+                  <div class="output-empty-icon" aria-hidden="true">🔗</div>
+                  <p class="output-empty-text">
+                    Your link will appear here.<br />
+                    Fill in the form above and click <strong>Generate Link</strong>.
+                  </p>
+                </div>
+
+                <!-- Result — hidden until link is generated -->
+                <div id="outputResultArea" class="output-result-area is-hidden">
+
+                  <div class="output-link-box">
+                    <a
+                      id="outputLinkText"
+                      href="#"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="output-link-text"
+                      aria-label="Your generated WhatsApp link — click to open"
+                    >
+                      <!-- Populated by JS -->
+                    </a>
+                  </div>
+
+                  <div class="output-actions">
+                    <button
+                      type="button"
+                      class="btn btn-primary copy-btn"
+                      id="copyLinkBtn"
+                      aria-label="Copy link to clipboard"
+                    >
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+                        <rect x="9" y="9" width="13" height="13" rx="2"/>
+                        <path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/>
+                      </svg>
+                      Copy Link
+                    </button>
+
+                    <button
+                      type="button"
+                      class="btn btn-secondary"
+                      id="openLinkBtn"
+                      aria-label="Open link in WhatsApp"
+                    >
+                      Open in WhatsApp ↗
+                    </button>
+                  </div>
+
+                  <p class="output-tip">
+                    💡 Tip: Paste this link in your Instagram bio, Facebook post, email signature, or paid ads to let customers reach you instantly.
+                  </p>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ── Preview Panel (sticky) ────────────────────── -->
+          <div class="preview-panel" id="previewPanel" aria-label="WhatsApp chat preview">
+
+            <!-- Panel header -->
+            <div class="panel-header">
+              <div class="panel-header-icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--green-500)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="5" y="2" width="14" height="20" rx="2" ry="2"/>
+                  <line x1="12" y1="18" x2="12.01" y2="18"/>
+                </svg>
+              </div>
+              <div>
+                <p class="panel-title">Live Preview</p>
+                <p class="panel-subtitle">Updates as you type</p>
+              </div>
+            </div>
+
+            <div class="preview-panel-body">
+
+              <!-- Phone Mockup -->
+              <div class="preview-phone-wrap" role="region" aria-label="WhatsApp phone mockup preview">
+                <div class="preview-phone-glow" aria-hidden="true"></div>
+                
+                
+                
+                <div class="preview-phone">
+                  <div class="phone-screen">
+                    <!-- Status bar -->
+                    <div class="phone-statusbar" aria-hidden="true">
+                      <span>9:41</span>
+                      <span>▲ ●●● ⚡</span>
+                    </div>
+                    <!-- Chat header -->
+                    <div class="phone-header">
+                      <span class="phone-back-btn" aria-hidden="true">‹</span>
+                      <div class="phone-avatar" aria-hidden="true">👤</div>
+                      <div class="phone-contact-info">
+                        <div class="phone-contact-name" id="previewContactName">+237 6XX XXX XXX</div>
+                        <div class="phone-contact-status">online</div>
+                      </div>
+                    </div>
+                    <!-- Chat body -->
+                    <div class="phone-chat-body">
+                      <div class="chat-date-chip" aria-hidden="true">Today</div>
+                      <div class="chat-bubble received" aria-hidden="true">
+                        Hello! 👋 How can I help you today?
+                        <span class="chat-bubble-time">09:38</span>
+                      </div>
+                      <div class="chat-bubble sent">
+                        <span id="previewSentBubble">Hi! I saw your offer and I'm interested. Can we chat?</span>
+                        <span class="chat-bubble-time" aria-hidden="true">09:41 ✓✓</span>
+                      </div>
+                    </div>
+                    <!-- Input bar -->
+                    <div class="phone-input-bar" aria-hidden="true">
+                      <div class="phone-input-field">Type a message</div>
+                      <div class="phone-send-btn">
+                        <svg width="14" height="14" viewBox="0 0 24 24">
+                          <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z" fill="white"/>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Pro Tips -->
+              <div class="preview-tips">
+                <h3 class="preview-tips-title">💡 Pro Tips</h3>
+                <ul class="preview-tip-list">
+                  <li>Keep your message under 100 characters — brief and friendly works best.</li>
+                  <li>Start with context: "Hi, I'm reaching out from [Your Business]…"</li>
+                  <li>Add a call-to-action: "Reply to get full details right away."</li>
+                  <li>Test the link yourself before using it in campaigns.</li>
+                </ul>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Help / FAQ strip ─────────────────────────────────── -->
+    <section class="faq-section" aria-labelledby="faqTitle">
+      <div class="container">
+
+        <div class="faq-header reveal">
+          <p class="section-label section-label--center">Quick Help</p>
+          <h2 class="section-title section-title--center" id="faqTitle">Frequently Asked Questions</h2>
+        </div>
+
+        <div class="faq-grid">
+
+          <article class="card faq-card reveal reveal-delay-1">
+            <h3 class="faq-question">What is a wa.me link?</h3>
+            <p class="faq-answer">
+              A <code class="code-snippet">wa.me</code> link (e.g. <em>wa.me/237650123456</em>) opens a WhatsApp chat to a specific number directly — no need for the recipient to save your number first.
+            </p>
+          </article>
+
+          <article class="card faq-card reveal reveal-delay-2">
+            <h3 class="faq-question">Do I need a WhatsApp account?</h3>
+            <p class="faq-answer">
+              No account or login is required to <em>generate</em> a link here. However, the person whose number you're using must have WhatsApp installed and active for the link to open a chat.
+            </p>
+          </article>
+
+          <article class="card faq-card reveal reveal-delay-3">
+            <h3 class="faq-question">Do you store my phone number?</h3>
+            <p class="faq-answer">
+              Never. All link generation happens entirely in your browser. No data is sent to any server. Your number and message stay private on your device.
+            </p>
+          </article>
+
+          <article class="card faq-card reveal reveal-delay-1">
+            <h3 class="faq-question">Why include a pre-filled message?</h3>
+            <p class="faq-answer">
+              Pre-filled messages dramatically reduce the friction of starting a conversation. Customers see exactly what to write, click send, and you get qualified leads instead of blank messages.
+            </p>
+          </article>
+
+          <article class="card faq-card reveal reveal-delay-2">
+            <h3 class="faq-question">Which country should I choose?</h3>
+            <p class="faq-answer">
+              Choose the country where your phone number is registered. The country code is the international dialling prefix (e.g. +237 for Cameroon, +44 for UK) added before the local number.
+            </p>
+          </article>
+
+          <article class="card faq-card reveal reveal-delay-3">
+            <h3 class="faq-question">Where can I use my link?</h3>
+            <p class="faq-answer">
+              Anywhere: Instagram bio, Facebook posts, TikTok profile, email signatures, business cards, paid ads, website buttons, QR codes — anywhere you want people to start a WhatsApp conversation instantly.
+            </p>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ── CTA Footer strip ─────────────────────────────────── -->
+    <section class="cta-section" aria-label="Call to action">
+      <div class="container">
+        <p class="section-label section-label--center">Ready?</p>
+        <h2 class="section-title section-title--center section-title--cta">
+          Your link is 5 seconds away
+        </h2>
+        <p class="cta-tagline">
+          Scroll up and fill in two fields. That's all it takes.
+        </p>
+        <a href="#generator" class="btn btn-primary btn-lg">
+          Generate My Link ↑
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ── Site Footer ──────────────────────────────────────── -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+
+        <div class="footer-brand">
+          <a href="/" class="header-brand" aria-label="Quick Wa Link — Home">
+            <img src="/assets/icons/icon.svg" alt="" class="brand-icon" width="36" height="36" aria-hidden="true" />
+            <div class="brand-text">
+              <span class="brand-name">Quick Wa Link</span>
+              <span class="brand-tagline">Free — forever.</span>
+            </div>
+          </a>
+          <p>The simplest way to create WhatsApp click-to-chat links with pre-filled messages. Built by Godlove Tikum.</p>
+        </div>
+
+        <nav aria-label="Footer navigation">
+          <p class="footer-nav-title">Pages</p>
+          <ul class="footer-nav-list">
+            <li><a href="/"        class="footer-nav-link">Landing Page</a></li>
+            <li><a href="/dashboard/" class="footer-nav-link">App — Generator</a></li>
+            <li><a href="/#contact"   class="footer-nav-link">Contact</a></li>
+            <li><a href="https://godlovetikum.netlify.app" target="_blank" rel="noopener noreferrer" class="footer-nav-link">Developer ↗</a></li>
+          </ul>
+        </nav>
+
+        <div>
+          <p class="footer-social-title">Connect</p>
+          <ul class="footer-social-list" role="list" aria-label="Social media links">
+            <li><a href="https://facebook.com/godlovetikum" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="Facebook">Fb</a></li>
+            <li><a href="https://tiktok.com/@godlovtikum"   target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="TikTok">Tk</a></li>
+            <li><a href="https://instagram.com/godlovtikum" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="Instagram">Ig</a></li>
+            <li><a href="https://youtube.com/@godlovtikum"  target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="YouTube">Yt</a></li>
+            <li><a href="https://wa.me/237654841420"         target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="WhatsApp">Wa</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copy">
+          &copy; <span id="footerYear">2026</span> Quick Wa Link &mdash; Built by
+          <a href="https://godlovetikum.netlify.app" target="_blank" rel="noopener noreferrer">Godlove Tikum (@godlovtikum)</a>.
+          MIT License.
+        </p>
+        <p class="footer-disclaimer">Not affiliated with WhatsApp Inc. or Meta Platforms.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts — load after full DOM -->
+  <script src="/assets/js/shared.js"></script>
+  <script src="/assets/js/app.js"></script>
+  <script>
+    const footerYearEl = document.getElementById('footerYear');
+    if (footerYearEl) footerYearEl.textContent = new Date().getFullYear();
+    new window.QWL.ThemeManager();
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+# Quick Wa Link
+> Free WhatsApp link generator with pre-filled message support. Create wa.me links instantly. No sign-up. No login. 100% free.
+
+## What this site does
+Quick Wa Link is a free browser-based tool that generates WhatsApp click-to-chat links (wa.me URLs). Users pick a country code from a list of 200+ countries, enter a local phone number, optionally write a pre-filled message, and get a shareable link. Clicking the link opens a WhatsApp conversation directly — the recipient does not need to save the number first.
+
+## Pages
+
+- [Home / Landing Page](https://quickwalink.netlify.app/): Marketing landing page explaining the tool, how it works (4-step guide), use cases, about the developer, and a contact form.
+- [App / Generator](https://quickwalink.netlify.app/dashboard): The interactive link generator. Contains the form (country selector, phone input, message textarea), a live WhatsApp phone preview mockup, the generated link output with copy/open buttons, an FAQ section, and a pro-tips panel.
+
+## Key features
+- Generates standard wa.me and wa.me?text= URLs
+- 199 country codes (full international dialling prefix list)
+- Pre-filled message URL-encoded into the link
+- Live phone preview shows how the message looks in WhatsApp before sharing
+- All processing is client-side — no phone numbers or messages are ever stored or sent to a server
+- Progressive Web App (PWA) — installable on mobile and desktop
+- Contact form routes through a Netlify serverless function to Google Apps Script for email delivery
+
+## Who built this
+Built by Godlove Tikum, a self-taught software engineer and accounting student with previous experience in affiliate marketing, based in Cameroon. He focuses on building fast loading And high converting websites and mobile apps for SMEs.
+- Portfolio: https://godlovetikum.netlify.app
+- GitHub: https://github.com/godlovetikum
+- WhatsApp: https://wa.me/237654841420
+- Facebook: https://facebook.com/godlovetikum101
+- Twitter/X: https://x.com/@godlovetikum
+- Instagram: https://instagram.com/godlovtikum
+- YouTube: https://youtube.com/@godlovtikum
+
+## Technical notes
+- Built with plain HTML, CSS, and vanilla JavaScript (ES6 classes)
+- No frameworks, no build tools, no dependencies
+- Hosted on Netlify 
+- Contact form uses a Netlify Function (Node.js) forwarding to Google Apps Script
+- Service worker provides offline support for cached pages
+
+## License
+MIT License. Free to use, modify, and distribute with attribution.
+
+## Not affiliated with
+WhatsApp Inc. or Meta Platforms, Inc.

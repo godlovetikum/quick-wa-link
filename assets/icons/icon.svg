@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="Quick Wa Link app icon">
+  <defs>
+    <!-- Main background gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a7a6b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#054d42;stop-opacity:1" />
+    </linearGradient>
+
+    <!-- Green glow gradient for bubble -->
+    <radialGradient id="bubbleGlow" cx="50%" cy="45%" r="55%">
+      <stop offset="0%" style="stop-color:#2de876;stop-opacity:0.25" />
+      <stop offset="100%" style="stop-color:#25d366;stop-opacity:0" />
+    </radialGradient>
+
+    <!-- Link chain gradient -->
+    <linearGradient id="chainGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#c8f7e0;stop-opacity:1" />
+    </linearGradient>
+
+    <!-- Subtle noise/texture overlay -->
+    <filter id="noise" x="0%" y="0%" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch" result="noise"/>
+      <feColorMatrix type="saturate" values="0" in="noise" result="grayNoise"/>
+      <feBlend in="SourceGraphic" in2="grayNoise" mode="overlay" result="blend"/>
+      <feComposite in="blend" in2="SourceGraphic" operator="in"/>
+    </filter>
+
+    <!-- Drop shadow for bubble -->
+    <filter id="shadow" x="-15%" y="-15%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="6" stdDeviation="12" flood-color="#000000" flood-opacity="0.35"/>
+    </filter>
+
+    <!-- Glow filter for link icon -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Clip for rounded square -->
+    <clipPath id="roundedSquare">
+      <rect width="512" height="512" rx="112" ry="112"/>
+    </clipPath>
+  </defs>
+
+  <!-- ── Rounded square background ── -->
+  <rect width="512" height="512" rx="112" ry="112" fill="url(#bgGrad)"/>
+
+  <!-- Subtle texture layer -->
+  <rect width="512" height="512" rx="112" ry="112" fill="url(#bubbleGlow)"/>
+
+  <!-- Inner light arc (top-left highlight) -->
+  <ellipse cx="160" cy="130" rx="220" ry="120"
+    fill="none" stroke="rgba(255,255,255,0.07)" stroke-width="40"
+    clip-path="url(#roundedSquare)"/>
+
+  <!-- ── WhatsApp speech bubble (custom, stylised) ── -->
+  <g filter="url(#shadow)">
+    <!-- Main bubble body -->
+    <path d="
+      M256 108
+      C176 108 112 168 112 242
+      C112 274 124 304 146 328
+      L128 400
+      L204 378
+      C220 384 238 388 256 388
+      C336 388 400 328 400 242
+      C400 168 336 108 256 108 Z
+    " fill="#25d366"/>
+
+    <!-- Bubble inner highlight (top sheen) -->
+    <path d="
+      M256 118
+      C180 118 124 175 124 242
+      C124 272 135 300 154 323
+    " fill="none" stroke="rgba(255,255,255,0.18)" stroke-width="6" stroke-linecap="round"/>
+  </g>
+
+  <!-- ── Link chain icon inside bubble ── -->
+  <g filter="url(#glow)" transform="translate(256,242) rotate(-35)">
+    <!-- Left ring -->
+    <rect x="-88" y="-22" width="68" height="44" rx="22" ry="22"
+      fill="none" stroke="url(#chainGrad)" stroke-width="18"
+      stroke-linecap="round"/>
+    <!-- Right ring -->
+    <rect x="20" y="-22" width="68" height="44" rx="22" ry="22"
+      fill="none" stroke="url(#chainGrad)" stroke-width="18"
+      stroke-linecap="round"/>
+    <!-- Overlap mask — white fill to make rings look linked -->
+    <rect x="-10" y="-14" width="20" height="28" fill="#25d366"/>
+  </g>
+
+  <!-- ── Small "speed" dots (suggest instant generation) ── -->
+  <circle cx="168" cy="440" r="7" fill="rgba(255,255,255,0.35)"/>
+  <circle cx="192" cy="440" r="5" fill="rgba(255,255,255,0.22)"/>
+  <circle cx="212" cy="440" r="3" fill="rgba(255,255,255,0.14)"/>
+
+  <!-- ── Developer credit strip (visible on large icon, subtle) ── -->
+  <!-- Thin bottom bar -->
+  <rect x="0" y="468" width="512" height="44" rx="0" fill="rgba(0,0,0,0.25)" clip-path="url(#roundedSquare)"/>
+
+  <!-- "by Godlove Tikum" text — only readable at 192px+ -->
+  <text
+    x="256" y="492"
+    font-family="'DM Sans', 'Helvetica Neue', Arial, sans-serif"
+    font-size="21"
+    font-weight="600"
+    fill="rgba(255,255,255,0.55)"
+    text-anchor="middle"
+    letter-spacing="0.5"
+  >by Godlove Tikum</text>
+</svg>

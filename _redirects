@@ -1,0 +1,24 @@
+# ============================================================
+# Netlify _redirects — Quick Wa Link
+# https://quickwalink.netlify.app
+# Docs: https://docs.netlify.com/routing/redirects/
+# ============================================================
+
+# ── Clean URL aliases ──────────────────────────────────────
+/app          /dashboard/    200
+/generator    /dashboard/    200
+/create       /dashboard/    200
+/dashboard/*  /dashboard/:splat   200
+
+# ── Redirect legacy routes ─────────────────────────────────
+/index        /             301
+/home         /             301
+/app.html     /dashboard/   301
+
+# ── Block access to source/config files ────────────────────
+/.env         /404/index.html   404
+/.env.example /404/index.html   404
+/email.gs     /404/index.html   404
+
+# ── Catch-all: serve 404 page for unknown paths ────────────
+/*            /404/index.html   404

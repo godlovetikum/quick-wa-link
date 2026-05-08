@@ -1,0 +1,506 @@
+/* ============================================================
+   Quick Wa Link — App Page Styles (app.css)
+   ============================================================ */
+
+/* ── App Page Layout ─────────────────────────────────────── */
+.app-page {
+  padding-top: var(--header-height);
+  min-height: 100dvh;
+}
+
+/* Subtle top accent line */
+.app-page::after {
+  content: '';
+  display: block;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--green-700), transparent);
+  position: fixed;
+  top: var(--header-height);
+  left: 0;
+  right: 0;
+  z-index: 999;
+  opacity: 0.6;
+}
+
+/* ── App Hero bar ────────────────────────────────────────── */
+.app-hero {
+  background: var(--bg-raised);
+  border-bottom: 1px solid var(--border-subtle);
+  padding-block: var(--space-10) var(--space-8);
+  position: relative;
+  overflow: hidden;
+}
+
+.app-hero::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 600px;
+  height: 400px;
+  background: radial-gradient(ellipse, rgba(7,94,84,0.2) 0%, transparent 65%);
+  pointer-events: none;
+}
+
+.app-hero-inner {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: var(--space-6);
+  flex-wrap: wrap;
+}
+
+.app-hero-text {}
+
+.app-hero-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.625rem, 3vw, 2.25rem);
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  color: var(--text-primary);
+  margin-bottom: var(--space-2);
+  line-height: 1.15;
+}
+
+.app-hero-sub {
+  font-size: 0.9375rem;
+  color: var(--text-secondary);
+  max-width: 480px;
+  line-height: 1.65;
+}
+
+.app-hero-chips {
+  display: flex;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+}
+
+.app-hero-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-3);
+  background: var(--surface-1);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.app-hero-chip svg, .app-hero-chip span {
+  color: var(--green-500);
+}
+
+/* ── Generator + Preview Layout ─────────────────────────── */
+.app-workspace {
+  padding-block: var(--space-10) var(--space-16);
+}
+
+.workspace-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-8);
+  align-items: start;
+}
+
+/* ── Generator Panel ─────────────────────────────────────── */
+.generator-panel {
+  background: var(--bg-raised);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+}
+
+.panel-header {
+  padding: var(--space-6) var(--space-8);
+  border-bottom: 1px solid var(--border-subtle);
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.panel-header-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-md);
+  background: rgba(37, 211, 102, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.panel-title {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.panel-subtitle {
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+  margin-top: 1px;
+}
+
+.panel-body {
+  padding: var(--space-8);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+/* Phone number row */
+.phone-row {
+  display: flex;
+  gap: var(--space-3);
+}
+
+.phone-prefix-badge {
+  display: flex;
+  align-items: center;
+  padding: 0 var(--space-4);
+  background: var(--surface-2);
+  border: 1.5px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  white-space: nowrap;
+  min-width: 64px;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: border-color var(--transition-fast);
+}
+
+.phone-prefix-badge.active {
+  border-color: var(--green-700);
+  color: var(--green-400);
+}
+
+.phone-input-wrap { flex: 1; }
+
+/* Form actions row */
+.generator-actions {
+  display: flex;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+}
+
+/* Output card */
+.output-card {
+  background: var(--bg-raised);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  transition: border-color var(--transition-mid);
+  margin-top: var(--space-6);
+}
+
+/* ── Output result area (flex container, hidden until generated) */
+.output-result-area {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.output-card.has-link {
+  border-color: rgba(37, 211, 102, 0.25);
+}
+
+.output-header {
+  padding: var(--space-5) var(--space-6);
+  border-bottom: 1px solid var(--border-subtle);
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.output-status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--text-muted);
+  flex-shrink: 0;
+  transition: background var(--transition-mid);
+}
+
+.output-card.has-link .output-status-dot {
+  background: var(--green-500);
+  box-shadow: 0 0 6px var(--green-500);
+}
+
+.output-label {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  transition: color var(--transition-mid);
+}
+
+.output-card.has-link .output-label {
+  color: var(--green-400);
+}
+
+.output-body {
+  padding: var(--space-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  min-height: 140px;
+}
+
+.output-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-3);
+  min-height: 120px;
+  text-align: center;
+}
+
+.output-empty-icon {
+  font-size: 2rem;
+  opacity: 0.4;
+  line-height: 1;
+}
+
+.output-empty-text {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  max-width: 280px;
+  line-height: 1.65;
+}
+
+.output-empty-text strong { color: var(--text-secondary); }
+
+.output-link-box {
+  background: var(--surface-1);
+  border: 1.5px solid var(--border-mid);
+  border-radius: var(--radius-md);
+  padding: var(--space-4);
+  overflow: hidden;
+}
+
+.output-link-text {
+  display: block;
+  font-size: 0.8125rem;
+  color: var(--green-400);
+  word-break: break-all;
+  line-height: 1.6;
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.output-link-text:hover { color: var(--green-300, #6ee7b7); }
+
+.output-actions {
+  display: flex;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+}
+
+.output-tip {
+  font-size: 0.775rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  padding: var(--space-3) var(--space-4);
+  background: var(--bg-overlay);
+  border-radius: var(--radius-sm);
+  border-left: 2px solid var(--green-900);
+}
+
+/* ── Preview Panel ───────────────────────────────────────── */
+.preview-panel {
+  background: var(--bg-raised);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  position: sticky;
+  top: calc(var(--header-height) + var(--space-6));
+}
+
+.preview-panel-body {
+  padding: var(--space-8);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-6);
+}
+
+.preview-tips {
+  width: 100%;
+}
+
+.preview-tips-title {
+  font-family: var(--font-display);
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+  margin-bottom: var(--space-3);
+}
+
+.preview-tip-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.preview-tip-list li {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  padding-left: var(--space-4);
+  position: relative;
+  line-height: 1.6;
+}
+
+.preview-tip-list li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: var(--green-700);
+  font-size: 0.7rem;
+}
+
+/* Phone mockup in preview panel */
+.preview-phone-wrap {
+  position: relative;
+}
+
+.preview-phone-glow {
+  position: absolute;
+  inset: -15%;
+  background: radial-gradient(ellipse, var(--glow-green), transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.preview-phone {
+  position: relative;
+  z-index: 1;
+  width: 280px;
+  background: #1a1a2e;
+  border-radius: 30px;
+  padding: 12px;
+  box-shadow:
+    0 0 0 1.5px rgba(255,255,255,0.05),
+    0 24px 60px rgba(0,0,0,0.55);
+}
+
+.preview-phone .phone-screen {
+  border-radius: 22px;
+  min-height: 420px;
+}
+
+@media (max-width: 1024px) {
+  .workspace-grid { grid-template-columns: 1fr; }
+  .preview-panel { position: static; }
+}
+
+@media (max-width: 768px) {
+  .app-hero { text-align: center;}
+  .app-hero-chip { margin-inline: auto; justify-content: center;}
+  .panel-body { padding: var(--space-5); }
+  .generator-actions { flex-direction: column; }
+  .generator-actions .btn { width: 100%; justify-content: center; }
+}
+
+/* ── FAQ section ──────────────────────────────────────────── */
+.faq-section {
+  padding-block: var(--space-16);
+  background: var(--bg-raised);
+  border-top: 1px solid var(--border-subtle);
+}
+
+.faq-header {
+  text-align: center;
+  margin-bottom: var(--space-10);
+}
+
+.faq-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-5);
+}
+
+.faq-card { padding: var(--space-6); }
+
+.faq-question {
+  font-family: var(--font-display);
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: var(--space-2);
+}
+
+.faq-answer {
+  font-size: 0.8125rem;
+  color: var(--text-secondary);
+  line-height: 1.65;
+}
+
+.code-snippet {
+  background: var(--surface-1);
+  padding: 1px 5px;
+  border-radius: 3px;
+  font-size: 0.75rem;
+}
+
+/* ── CTA footer strip ─────────────────────────────────────── */
+.cta-section {
+  padding-block: var(--space-16);
+  text-align: center;
+}
+
+.section-title--cta { margin-bottom: var(--space-5); }
+
+.cta-tagline {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  margin-bottom: var(--space-8);
+}
+
+/* ── Copy button copied state ────────────────────────────── */
+.copy-btn.copied {
+  background: var(--green-700);
+  border-color: var(--green-700);
+  color: white;
+}
+
+/* ── Loading state on generate btn ──────────────────────── */
+.generate-btn.loading {
+  pointer-events: none;
+}
+
+/* ── QR Code section (below workspace) ──────────────────── */
+.qr-section {
+  padding-block: var(--space-16);
+  background: var(--bg-raised);
+  border-top: 1px solid var(--border-subtle);
+  text-align: center;
+  display: none;
+}
+
+.qr-section.visible { display: block; }
+
+.qr-section-inner {
+  max-width: 480px;
+  margin-inline: auto;
+}
+
+.qr-canvas-wrap {
+  display: inline-flex;
+  padding: var(--space-5);
+  background: white;
+  border-radius: var(--radius-lg);
+  margin-block: var(--space-8);
+}
+
+.qr-actions {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-3);
+}

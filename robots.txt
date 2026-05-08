@@ -1,0 +1,75 @@
+# ============================================================
+# robots.txt — Quick Wa Link
+# https://quickwalink.netlify.app
+# Last updated: 2026-03-11
+# ============================================================
+
+# ── General crawlers ───────────────────────────────────────
+User-agent: *
+Allow: /
+Allow: /dashboard/
+Allow: /images/
+Allow: /icons/icon.svg
+Disallow: /.netlify/
+Disallow: /netlify/
+
+# ── Google ─────────────────────────────────────────────────
+User-agent: Googlebot
+Allow: /
+Disallow: /.netlify/
+
+User-agent: Googlebot-Image
+Allow: /images/
+Allow: /icons/
+
+# ── Bing ───────────────────────────────────────────────────
+User-agent: Bingbot
+Allow: /
+Disallow: /.netlify/
+
+# ── AI crawlers — allowed (indexing benefits the site) ─────
+User-agent: GPTBot
+Allow: /
+Disallow: /.netlify/
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+Disallow: /.netlify/
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+Disallow: /.netlify/
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+User-agent: YouBot
+Allow: /
+
+# ── Crawl-delay for heavy bots ─────────────────────────────
+User-agent: AhrefsBot
+Crawl-delay: 10
+
+User-agent: SemrushBot
+Crawl-delay: 10
+
+User-agent: MJ12bot
+Crawl-delay: 20
+
+User-agent: DotBot
+Crawl-delay: 20
+
+# ── Sitemap ────────────────────────────────────────────────
+Sitemap: https://quickwalink.netlify.app/sitemap.xml
