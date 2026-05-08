@@ -56,16 +56,16 @@ Keep commits clean and descriptive.
 
 ## 👤 About Me
 
-**Godlove (Gody Blogs)** ✍️  
-Web Developer | Digital Problem Solver  
+**Godlove Tikum** ✍️  
+self-taught software engineer and accountant.
 
-I focus on **practical web solutions** that help small businesses and individuals grow online.  
+I focus on **practical web & mobile solutions** that help small businesses and individuals grow online.  
 I share my work, experiments, and learning journey publicly, so anyone can see the process behind building real digital tools.  
 
 Connect with me on:  
 
-- Facebook: [Gody Blogs](https://facebook.com/godyblogs)  
-- Threads: [@godyblogs](https://www.threads.com/@godlovetikum)
+- Facebook: [Godlove Tikum](https://facebook.com/godlovetikum101)  
+- Threads: [@godlovetikum](https://www.threads.com/@godlovetikum)
 
 ---
 
