@@ -63,10 +63,11 @@ I focus on **practical web & mobile solutions** that help small businesses and i
 I share my work, experiments, and learning journey publicly, so anyone can see the process behind building real digital tools.  
 
 Connect with me on:  
-
+- Twitter (x): [@Godlovetikum](https://x.com/Godlovetikum)
 - Facebook: [Godlove Tikum](https://facebook.com/godlovetikum101)  
 - Threads: [@godlovetikum](https://www.threads.com/@godlovetikum)
 
+- Portfolio: <https://godlovetikum.netlify.app>
 ---
 
 ## 📜 License
