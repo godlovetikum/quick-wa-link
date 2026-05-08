@@ -3,17 +3,19 @@
  * Strategy: cache-first for static assets, network-first for navigation
  */
 
-const STATIC_CACHE_NAME = 'qwl-static-v1.0.1';
+const STATIC_CACHE_NAME = 'qwl-static-v1.0.3';
 
 const PRECACHE_URLS = [
   '/index.html',
-  '/dashboard/index.html',
+  '/create/index.html',
   '/manifest.json',
   '/assets/css/main.css',
   '/assets/css/index.css',
   '/assets/css/app.css',
   '/assets/js/shared.js',
-  '/assets/js/app.js',
+  '/assets/js/app.js',,
+  '/assets/icons/quick-wa-link-logo.png',
+  '/assets/icons/icon.svg'
 ];
 
 /* ── Install: pre-cache critical assets ─── */
@@ -41,6 +43,7 @@ self.addEventListener('activate', (activateEvent) => {
 
 /* ── Fetch: cache-first static, network-first nav ── */
 self.addEventListener('fetch', (fetchEvent) => {
+  return;
   const requestUrl = new URL(fetchEvent.request.url);
 
   // Skip non-GET and Netlify function calls

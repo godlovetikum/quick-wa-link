@@ -7,7 +7,7 @@ Quick Wa Link is a free browser-based tool that generates WhatsApp click-to-chat
 ## Pages
 
 - [Home / Landing Page](https://quickwalink.netlify.app/): Marketing landing page explaining the tool, how it works (4-step guide), use cases, about the developer, and a contact form.
-- [App / Generator](https://quickwalink.netlify.app/dashboard): The interactive link generator. Contains the form (country selector, phone input, message textarea), a live WhatsApp phone preview mockup, the generated link output with copy/open buttons, an FAQ section, and a pro-tips panel.
+- [App / Generator](https://quickwalink.netlify.app/create/): The interactive link generator. Contains the form (country selector, phone input, message textarea), a live WhatsApp phone preview mockup, the generated link output with copy/open buttons, an FAQ section, and a pro-tips panel.
 
 ## Key features
 - Generates standard wa.me and wa.me?text= URLs
@@ -25,8 +25,8 @@ Built by Godlove Tikum, a self-taught software engineer and accounting student w
 - WhatsApp: https://wa.me/237654841420
 - Facebook: https://facebook.com/godlovetikum101
 - Twitter/X: https://x.com/@godlovetikum
-- Instagram: https://instagram.com/godlovtikum
-- YouTube: https://youtube.com/@godlovtikum
+- Instagram: https://instagram.com/godlovetikum
+- YouTube: https://youtube.com/@godlovetikum
 
 ## Technical notes
 - Built with plain HTML, CSS, and vanilla JavaScript (ES6 classes)

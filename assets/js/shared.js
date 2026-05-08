@@ -167,9 +167,7 @@ class SiteHeader {
     this.menuToggle?.setAttribute('aria-expanded', 'true');
     this.mobileNav?.setAttribute('aria-hidden', 'false');
 
-    // Focus first link for accessibility
-    const firstMobileLink = this.mobileNav?.querySelector('.mobile-nav-link');
-    firstMobileLink?.focus();
+   
   }
 
   /** @private */
@@ -181,12 +179,6 @@ class SiteHeader {
     this.mobileNav?.setAttribute('aria-hidden', 'true');
   }
 
-  /** Highlight active nav link based on href match */
-  setActiveLinkByHref(href) {
-    this.navLinks.forEach(linkEl => {
-      linkEl.classList.toggle('active', linkEl.getAttribute('href') === href);
-    });
-  }
 }
 
 /* ============================================================

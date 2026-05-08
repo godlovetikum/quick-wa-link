@@ -5,15 +5,16 @@
 # ============================================================
 
 # ── Clean URL aliases ──────────────────────────────────────
-/app          /dashboard/    200
-/generator    /dashboard/    200
-/create       /dashboard/    200
-/dashboard/*  /dashboard/:splat   200
+/app          /create/    301
+/generator    /create/    301
+/create       /create/    301
+/dashboard/*  /create/    301
 
 # ── Redirect legacy routes ─────────────────────────────────
 /index        /             301
 /home         /             301
-/app.html     /dashboard/   301
+/app.html     /create/   301
+
 
 # ── Block access to source/config files ────────────────────
 /.env         /404/index.html   404

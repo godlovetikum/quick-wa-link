@@ -13,7 +13,7 @@
   ],
   "background_color": "#075e54",
   "theme_color": "#075e54",
-  "orientation": "portrait-primary",
+  "orientation": "any",
   "lang": "en-US",
   "dir": "ltr",
   "categories": [
@@ -29,74 +29,8 @@
       "purpose": "any"
     },
     {
-      "src": "/assets/icons/icon-16.png",
-      "sizes": "16x16",
-      "type": "image/png",
-      "purpose": "any"
-    },
-    {
-      "src": "/assets/icons/icon-32.png",
-      "sizes": "32x32",
-      "type": "image/png",
-      "purpose": "any"
-    },
-    {
-      "src": "/assets/icons/icon-72.png",
-      "sizes": "72x72",
-      "type": "image/png",
-      "purpose": "any"
-    },
-    {
-      "src": "/assets/icons/icon-96.png",
-      "sizes": "96x96",
-      "type": "image/png",
-      "purpose": "any"
-    },
-    {
-      "src": "/assets/icons/icon-128.png",
-      "sizes": "128x128",
-      "type": "image/png",
-      "purpose": "any"
-    },
-    {
-      "src": "/assets/icons/icon-144.png",
-      "sizes": "144x144",
-      "type": "image/png",
-      "purpose": "any"
-    },
-    {
-      "src": "/assets/icons/icon-152.png",
-      "sizes": "152x152",
-      "type": "image/png",
-      "purpose": "any"
-    },
-    {
-      "src": "/assets/icons/icon-192.png",
-      "sizes": "192x192",
-      "type": "image/png",
-      "purpose": "maskable"
-    },
-    {
-      "src": "/assets/icons/icon-192.png",
-      "sizes": "192x192",
-      "type": "image/png",
-      "purpose": "any"
-    },
-    {
-      "src": "/assets/icons/icon-384.png",
-      "sizes": "384x384",
-      "type": "image/png",
-      "purpose": "any"
-    },
-    {
-      "src": "/assets/icons/icon-512.png",
-      "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "maskable"
-    },
-    {
-      "src": "/assets/icons/icon-512.png",
-      "sizes": "512x512",
+      "src": "/assets/icons/quick-wa-link-logo.png",
+      "sizes": "any",
       "type": "image/png",
       "purpose": "any"
     }
@@ -106,11 +40,24 @@
       "name": "Create WhatsApp Link",
       "short_name": "Create Link",
       "description": "Jump to the link generator",
-      "url": "/dashboard/",
+      "url": "/create/",
       "icons": [
         {
-          "src": "/assets/icons/icon-96.png",
-          "sizes": "96x96",
+          "src": "/assets/icons/quick-wa-link-logo.png",
+          "sizes": "any",
+          "type": "image/png"
+        }
+      ]
+    },
+    {
+      "name": "Feedback & contact",
+      "short_name": "Feedback",
+      "description": "Share feedback or contact us",
+      "url": "/create/",
+      "icons": [
+        {
+          "src": "/assets/icons/quick-wa-link-logo.png",
+          "sizes": "any",
           "type": "image/png"
         }
       ]

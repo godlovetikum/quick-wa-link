@@ -153,6 +153,7 @@ function sendAcknowledgementEmail(data, config) {
     '• WhatsApp:  https://wa.me/237654841420',
     '• Portfolio: https://godlovetikum.netlify.app',
     '• Facebook:  https://facebook.com/godlovetikum101',
+    '• Twitter (X): https://x.com/Godlovetikum',
     '',
     'Best regards,',
     'Godlove Tikum',

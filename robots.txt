@@ -7,7 +7,7 @@
 # ── General crawlers ───────────────────────────────────────
 User-agent: *
 Allow: /
-Allow: /dashboard/
+Allow: /create/
 Allow: /images/
 Allow: /icons/icon.svg
 Disallow: /.netlify/

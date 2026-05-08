@@ -15,7 +15,7 @@
 
   <!-- App / Generator page -->
   <url>
-    <loc>https://quickwalink.netlify.app/dashboard/</loc>
+    <loc>https://quickwalink.netlify.app/create/</loc>
     <lastmod>2026-03-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>

@@ -32,7 +32,7 @@
   <meta name="twitter:title"       content="Quick Wa Link — Free WhatsApp Link Generator" />
   <meta name="twitter:description" content="Create clickable WhatsApp links with pre-filled messages. Share in bios, ads, posts. Free, instant, no account needed." />
   <meta name="twitter:image"       content="https://quickwalink.netlify.app/assets/images/og-image.png" />
-  <meta name="twitter:creator"     content="@godlovtikum" />
+  <meta name="twitter:creator"     content="@godlovetikum" />
 
   <!-- PWA -->
   <link rel="manifest" href="/manifest.json" />
@@ -49,10 +49,10 @@
   <meta name="msapplication-config"     content="none" />
 
   <!-- Favicons -->
-  <link rel="icon" type="image/svg+xml"           href="/assets/icons/icon.svg" />
-  <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/icon-32.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/icon-16.png" />
-  <link rel="shortcut icon" type="image/png"      href="/assets/icons/icon-32.png" />
+  <link rel="icon" type="image/svg+xml" href="/assets/icons/icon.svg" />
+  <link rel="icon" type="image/png" href="/assets/icons/quick-wa-link-logo.png" />
+  <link rel="shortcut icon" type="image/png" href="/assets/icons/quick-wa-link-logo.png" />
+  <link rel="apple-touch-icon" href="/assets/icons/quick-wa-link-logo.png" />
 
   <!-- Theme: run before stylesheets to prevent light/dark flash -->
   <script>
@@ -136,7 +136,7 @@
               <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/>
             </svg>
           </button>
-          <a href="/dashboard/" class="btn btn-primary btn-sm">
+          <a href="/create/" class="btn btn-primary btn-sm">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true">
               <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/>
             </svg>
@@ -165,7 +165,7 @@
       <a href="#about"       class="mobile-nav-link">About</a>
       <a href="#contact"     class="mobile-nav-link">Contact</a>
     </div>
-    <a href="/dashboard/" class="btn btn-primary btn-full">
+    <a href="/create/" class="btn btn-primary btn-full">
       Generate My Link →
     </a>
   </nav>
@@ -199,7 +199,7 @@
             </p>
 
             <div class="hero-actions reveal reveal-delay-3">
-              <a href="/dashboard/" class="btn btn-primary btn-lg">
+              <a href="/create/" class="btn btn-primary btn-lg">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                   <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/>
                 </svg>
@@ -447,7 +447,7 @@
                   Facebook
                 </a>
 
-                <a href="https://x.com/Godlovtikum" target="_blank" rel="noopener noreferrer" class="dev-social-btn" role="listitem" aria-label="Godlove on Twitter">
+                <a href="https://x.com/Godlovetikum" target="_blank" rel="noopener noreferrer" class="dev-social-btn" role="listitem" aria-label="Godlove on Twitter">
                   Twitter (x)
                 </a>
 
@@ -540,7 +540,7 @@
             </p>
             <div class="success-actions">
               <a href="https://facebook.com/godlovetikum101" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Facebook</a>
-              <a href="https://x.com/Godlovtikum"   target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Twitter (x)</a>
+              <a href="https://x.com/Godlovetikum"   target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Twitter (x)</a>
               <button class="btn btn-primary" id="sendAnotherBtn" type="button">Send Another Message</button>
             </div>
           </div>
@@ -686,25 +686,23 @@
       <div class="footer-grid">
 
         <div class="footer-brand">
-          <a href="/" class="header-brand" aria-label="Quick Wa Link">
+          <a href="/" class="header-brand" aria-label="Quick Wa Link — Home">
             <img src="/assets/icons/icon.svg" alt="" class="brand-icon" width="36" height="36" aria-hidden="true" />
             <div class="brand-text">
               <span class="brand-name">Quick Wa Link</span>
               <span class="brand-tagline">Free — forever.</span>
             </div>
           </a>
-          <p>The simplest way to create WhatsApp click-to-chat links with pre-filled messages.</p>
+          <p>The simplest way to create WhatsApp click-to-chat links with pre-filled messages. Built by Godlove Tikum.</p>
         </div>
 
         <nav aria-label="Footer navigation">
-          <p class="footer-nav-title">Navigation</p>
+          <p class="footer-nav-title">Pages</p>
           <ul class="footer-nav-list">
-            <li><a href="/dashboard/"   class="footer-nav-link">Generate Link</a></li>
-            <li><a href="#howItWorks" class="footer-nav-link">How It Works</a></li>
-            <li><a href="#useCases"   class="footer-nav-link">Use Cases</a></li>
-            <li><a href="#about"      class="footer-nav-link">About</a></li>
-            <li><a href="#contact"    class="footer-nav-link">Contact</a></li>
-            <li><a href="https://godlovetikum.netlify.app" target="_blank"  class="footer-nav-link">Developer ↗</a></li>
+            <li><a href="/"        class="footer-nav-link">Landing Page</a></li>
+            <li><a href="#generatorForm" class="footer-nav-link">Link — Generator</a></li>
+            <li><a href="/#contact"   class="footer-nav-link">Contact</a></li>
+            <li><a href="https://godlovetikum.netlify.app" target="_blank" rel="noopener" class="footer-nav-link">Developer ↗</a></li>
           </ul>
         </nav>
 
@@ -715,60 +713,54 @@
               <a href="https://facebook.com/godlovetikum101"  
                 target="_blank" rel="noopener noreferrer" 
                 class="footer-social-link" aria-label="Facebook">
-                <i class="fab fa-facebook" aria-hidden="true"></i>
+                <i class="fab fa-facebook" aria-hidden="true"></i> Facebook 
               </a>
             </li>
             <li>
               <a href="https://x.com/@godlovetikum"    
                 target="_blank" rel="noopener noreferrer" 
                 class="footer-social-link" aria-label="Twitter">
-                <i class="fab fa-twitter" aria-hidden="true"></i>
+                <i class="fab fa-twitter" aria-hidden="true"></i> Twitter (X)
               </a>
             </li>
             <li>
-              <a href="https://instagram.com/godlovtikum" 
+              <a href="https://instagram.com/godlovetikum" 
                 target="_blank" rel="noopener noreferrer"
                 class="footer-social-link" aria-label="Instagram">
-                <i class="fab fa-instagram" aria-hidden="true"></i>
+                <i class="fab fa-instagram" aria-hidden="true"></i> Instagram 
                 </a>
             </li>
             <li>
-              <a href="https://youtube.com/@godlovtikum"  
+              <a href="https://youtube.com/@godlovetikum"  
                 target="_blank" rel="noopener noreferrer" 
                 class="footer-social-link" aria-label="YouTube">
-                <i class="fab fa-youtube" aria-hidden="true"></i>
+                <i class="fab fa-youtube" aria-hidden="true"></i> YouTube 
                 </a>
             </li>
             <li>
               <a href="https://wa.me/237654841420"
                 target="_blank" rel="noopener noreferrer" 
                 class="footer-social-link" aria-label="WhatsApp">
-                  <i class="fab fa-whatsapp" aria-hidden="true"></i>
+                  <i class="fab fa-whatsapp" aria-hidden="true"></i> WhatsApp
                 </a>
             </li>
           </ul>
         </div>
 
       </div>
-        <div class="footer_meta">
-            <a href="/llms.txt"    class="footer_meta_link" rel="nofollow">llms.txt</a>
-            <a href="/sitemap.xml" class="footer_meta_link" rel="nofollow">Sitemap</a>
-            <a href="/robots.txt"  class="footer_meta_link" rel="nofollow">robots.txt</a>
-        </div>
-        <a href="/llms.txt" class="footer_crawler" aria-hidden="true" tabindex="-1">llms.txt</a>
 
       <div class="footer-bottom">
         <p class="footer-copy">
           &copy; <span id="footerYear">2026</span> Quick Wa Link &mdash; Built by
-          <a href="https://godlovetikum.netlify.app" target="_blank" rel="noopener">Godlove Tikum (@godlovtikum)</a>.
-          MIT License.
+          <a href="https://godlovetikum.netlify.app" target="_blank" rel="noopener">Godlove Tikum (@godlovetikum)</a>.
+          MIT License        <div>
+
         </p>
-        <p class="footer-disclaimer">
-          Not affiliated with WhatsApp Inc. or Meta Platforms.
-        </p>
+        <p class="footer-disclaimer">Not affiliated with WhatsApp Inc. or Meta Platforms.</p>
       </div>
     </div>
   </footer>
+  <div class="toast-region" id="toastRegion" aria-live="polite" role="status" aria-atomic="false"></div>
 
   <!-- Scripts — load last, content already in DOM -->
   <script src="/assets/js/shared.js"></script>
@@ -777,9 +769,6 @@
     const footerYearEl = document.getElementById('footerYear');
     if (footerYearEl) footerYearEl.textContent = new Date().getFullYear();
     new window.QWL.ThemeManager();
-    new window.QWL.SiteHeader();
-    new window.QWL.ScrollReveal();
-    new window.QWL.ServiceWorkerManager();
   </script>
 
 </body>
