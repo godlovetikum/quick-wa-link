@@ -162,7 +162,7 @@
 
 .steps-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: var(--space-6);
   position: relative;
   margin-bottom: var(--space-20);
@@ -200,15 +200,15 @@
 
 .step-number {
   font-family: var(--font-display);
-  font-size: 0.7rem;
+  font-size: 0.5rem;
   font-weight: 800;
   letter-spacing: 0.1em;
   color: var(--green-700);
   background: var(--bg-raised);
   border: 2px solid var(--green-900);
   border-radius: var(--radius-full);
-  width: 44px;
-  height: 44px;
+  padding: 4px;
+  position: absolute;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -341,7 +341,7 @@
 
 .dev-name {
   font-family: var(--font-display);
-  font-size: 1.95rem;
+  font-size: 1.5rem;
   font-weight: 800;
   color: var(--text-primary);
   text-align: center;

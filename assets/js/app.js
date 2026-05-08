@@ -404,7 +404,8 @@ class ContactForm {
     const validationError = this._validateFormData(formData);
 
     if (validationError) {
-      this.toastManager.error(validationError);
+      this.toastManager.error(validationError.message);
+      document.querySelector(`#${validationError.field}`)?.focus();
       return;
     }
 
@@ -424,7 +425,7 @@ class ContactForm {
       }
 
       this._showSuccessState();
-      this.toastManager.success("Message sent! Godlove will reply within 24 hours.");
+      this.toastManager.success("Message sent! Expect a response within 24 hours.");
 
     } catch (submitError) {
       this.toastManager.error(submitError.message || 'Something went wrong. Please try WhatsApp instead.');
@@ -445,13 +446,13 @@ class ContactForm {
 
   /** @private */
   _validateFormData({ name, email, subject, message }) {
-    if (!name)    return 'Please enter your name.';
-    if (!email)   return 'Please enter your email address.';
+    if (!name || name.length <4)    return { field: 'contactName', message: 'Please enter your name (minimum 4 characters).'};
+    if (!email)   return { field:'contactEmail', message: 'Please enter your email address.'};
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) return 'Please enter a valid email address.';
-    if (!subject) return 'Please select a subject.';
-    if (!message) return 'Please write a message.';
-    if (message.length < 10) return 'Your message is too short (minimum 10 characters).';
-    if (message.length > 2000) return 'Your message is too long (maximum 2000 characters).';
+    if (!subject) return {field: 'contactSubject', message: 'Please select a subject.'};
+    if (!message) return {field: 'contactMessage', message: 'Please write a message.'};
+    if (message.length < 10) return {field: 'contactMessage', message: 'Your message is too short (minimum 10 characters).'};
+    if (message.length > 2000) return { field: 'contactMessage', message: 'Your message is too long (maximum 2000 characters).'};
     return null;
   }
 
